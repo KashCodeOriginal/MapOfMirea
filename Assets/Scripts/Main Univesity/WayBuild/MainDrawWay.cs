@@ -3,7 +3,6 @@ using Pathfinding;
 using TMPro;
 using UnityEngine.UI;
 using System.Collections;
-using UnityEngine.Animations;
 
 public class MainDrawWay : MonoBehaviour
 {
@@ -31,9 +30,11 @@ public class MainDrawWay : MonoBehaviour
 
   [SerializeField] private GameObject _drawWay;
 
+  [SerializeField] private GameObject _floorChangingButton;
+
   TrailRenderer NewTrails;
 
-  public bool _isWayDrawn = false;
+  public bool _isWayDrawn;
 
   public void AllowToDrawWay()
   {
@@ -47,9 +48,9 @@ public class MainDrawWay : MonoBehaviour
     {
       if (_isWayDrawn == false)
       {
-        if (_wayManager.GetComponent<WayManager>()._isFromInPlace == true && _wayManager.GetComponent<WayManager>()._isToInPlace == true)
+        if (_wayManager.GetComponent<WayManager>()._isFromInPlace && _wayManager.GetComponent<WayManager>()._isToInPlace)
         {
-          if (_universalMenu.GetComponent<MenuAnimation>()._isMenuUpped == true)
+          if (_universalMenu.GetComponent<MenuAnimation>()._isMenuUpped)
           {
             _universalMenu.GetComponent<MenuAnimation>().MenuDown();
           }
@@ -58,6 +59,21 @@ public class MainDrawWay : MonoBehaviour
           _cancel.GetComponent<ListCleaner>().OnClick();
 
           _camera.GetComponent<MainCamControll>().targetPosx = Start.transform.position.x;
+          switch (Start.transform.position.z)
+          {
+            case 14.1f:
+              _floorChangingButton.GetComponent<FloorChangingButton>().OnFirstFloorClick();
+              break;
+            case 9.1f:
+              _floorChangingButton.GetComponent<FloorChangingButton>().OnSecondFloorClick();
+              break;  
+            case 4.1f:
+              _floorChangingButton.GetComponent<FloorChangingButton>().OnThirdFloorClick();
+              break;
+            case -0.1f:
+              _floorChangingButton.GetComponent<FloorChangingButton>().OnFourthFloorClick();
+              break;
+          }
 
           AI.GetComponent<AILerp>().canMove = true;
 

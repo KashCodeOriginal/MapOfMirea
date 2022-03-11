@@ -1,22 +1,12 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-
-public enum _typesOfRooms
-{
-  FirstFloor,
-  SecondFloor,
-  ThirdFloor,
-  FourthFloor,
-}
 public class MainButtonControllerForWays : MonoBehaviour
 {
-
   [SerializeField] private MainButtonController _buttonController;
-
-  private _typesOfRooms _rooms;
-
-  private string[] _allRooms;
+  private List<String> _allRooms;
 
   public TMP_InputField inputFieldFrom;
   public TMP_InputField inputFieldTo;
@@ -24,17 +14,17 @@ public class MainButtonControllerForWays : MonoBehaviour
   [SerializeField] private GameObject buttonPrefabs;
   public Transform List;
 
-  private string inputFieldFromText;
-  private string inputFieldToText;
+  private string _inputFieldFromText;
+  private string _inputFieldToText;
 
-  private string tempText;
-  private TextMeshProUGUI setItemText;
+  private string _tempText;
+  private TextMeshProUGUI _setItemText;
 
-  private int _buttonsAmmount = 0;
+  private int _buttonsAmmount;
 
   private void Start()
   {
-    _allRooms = _buttonController.AllRoomsWayBuilding;
+    _allRooms = _buttonController.AllRoomsWayBuildings;
   }
   
   public void OnValueChangedFrom()
@@ -44,22 +34,22 @@ public class MainButtonControllerForWays : MonoBehaviour
       GameObject.Destroy(child.gameObject);
     }
 
-    inputFieldFromText = inputFieldFrom.text;
+    _inputFieldFromText = inputFieldFrom.text;
 
-    for (int i = 0; i < _allRooms.Length; i++)
+    for (int i = 0; i < _allRooms.Count; i++)
     {
       if (_buttonsAmmount <= 25)
       {
-        if (_allRooms[i].ToLower().Contains(inputFieldFromText.ToLower()))
+        if (_allRooms[i].ToLower().Contains(_inputFieldFromText.ToLower()))
         {
           GameObject button = Instantiate(buttonPrefabs, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
           button.tag = "WayButtonsFrom";
           button.transform.SetParent(List, false);
           button.GetComponent<MainCameraMover>().enabled = false;
           button.GetComponent<MainWayBuilder>().enabled = true;
-          setItemText = button.GetComponentInChildren<TextMeshProUGUI>();
-          tempText = _allRooms[i];
-          setItemText.text = tempText;
+          _setItemText = button.GetComponentInChildren<TextMeshProUGUI>();
+          _tempText = _allRooms[i];
+          _setItemText.text = _tempText;
           _buttonsAmmount++;
         }
       }
@@ -71,23 +61,23 @@ public class MainButtonControllerForWays : MonoBehaviour
     foreach (Transform child in List)
       GameObject.Destroy(child.gameObject);
 
-    inputFieldToText = inputFieldTo.text;
+    _inputFieldToText = inputFieldTo.text;
 
 
-    for (int i = 0; i < _allRooms.Length; i++)
+    for (int i = 0; i < _allRooms.Count; i++)
     {
       if (_buttonsAmmount <= 25)
       {
-        if (_allRooms[i].ToLower().Contains(inputFieldToText.ToLower()))
+        if (_allRooms[i].ToLower().Contains(_inputFieldToText.ToLower()))
         {
           GameObject button = Instantiate(buttonPrefabs, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
           button.tag = "WayButtonsTo";
           button.transform.SetParent(List, false);
           button.GetComponent<MainCameraMover>().enabled = false;
           button.GetComponent<MainWayBuilder>().enabled = true;
-          setItemText = button.GetComponentInChildren<TextMeshProUGUI>();
-          tempText = _allRooms[i];
-          setItemText.text = tempText;
+          _setItemText = button.GetComponentInChildren<TextMeshProUGUI>();
+          _tempText = _allRooms[i];
+          _setItemText.text = _tempText;
           _buttonsAmmount++;
         }
       }

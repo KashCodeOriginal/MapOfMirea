@@ -9,6 +9,8 @@ public class WayColorSetiings : MonoBehaviour
   [SerializeField] private SpriteRenderer _map;
   [SerializeField] private Camera _cam;
 
+  [SerializeField] private SpriteRenderer _secondFloor;
+
   [SerializeField] private SpriteRenderer _pathColorSettings;
 
   [SerializeField] private SpriteRenderer _firstPointColor;
@@ -20,7 +22,7 @@ public class WayColorSetiings : MonoBehaviour
   [SerializeField] private Material _wayMaterial;
   public void Start()
   {
-    _modelWaySettings.color = _map.color;
+    _modelWaySettings.color = _secondFloor.color;
     _backgroundWaySettings.color = _cam.backgroundColor;
     _pathColorSettings.color = _wayMaterial.color;
     _firstPointColor.color = _wayMaterial.color;

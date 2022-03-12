@@ -32,7 +32,7 @@ public class MapColorChanging : MonoBehaviour
 
   public void Awake()
   {
-    _modelForSettings.color = _map.GetComponent<SpriteRenderer>().color;
+    _modelForSettings.color = _secondFloor.GetComponent<SpriteRenderer>().color;
     _backGround.color = _cam.GetComponent<Camera>().backgroundColor;
   }
   public void OnWallsClick()
@@ -61,7 +61,6 @@ public class MapColorChanging : MonoBehaviour
     _secondFloorBG.color = new Color(gameObject.GetComponent<Image>().color.r, gameObject.GetComponent<Image>().color.g, gameObject.GetComponent<Image>().color.b, _secondFloor.color.a);
     _thirdFloorBG.color = new Color(gameObject.GetComponent<Image>().color.r, gameObject.GetComponent<Image>().color.g, gameObject.GetComponent<Image>().color.b, _thirdFloor.color.a);
     _fourthFloorBG.color = new Color(gameObject.GetComponent<Image>().color.r, gameObject.GetComponent<Image>().color.g, gameObject.GetComponent<Image>().color.b, _fourthFloor.color.a);
-
   }
 
   public void OnBackGroundLoad(float r, float g, float b)

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class MainButtonController : MonoBehaviour
 {
@@ -100,11 +101,13 @@ public class MainButtonController : MonoBehaviour
     if(_isFirstButtonActivated)
     {
       OnButtonsClean();
+      OnButtonDisabledColorChanging("Button 'À'");
     }
     else
     {
       OnButtonsClean();
       _isFirstButtonActivated = true;
+      OnButtonEnabledColorChanging("Button 'À'");
     }
   }
   public void OnSecondButtonClick()
@@ -112,11 +115,13 @@ public class MainButtonController : MonoBehaviour
     if (_isSecondButtonActivated)
     {
       OnButtonsClean();
+      OnButtonDisabledColorChanging("Button 'Á'");
     }
     else
     {
       OnButtonsClean();
       _isSecondButtonActivated = true;
+      OnButtonEnabledColorChanging("Button 'Á'");
     }
   }
   public void OnThirdButtonClick()
@@ -124,11 +129,13 @@ public class MainButtonController : MonoBehaviour
     if (_isThirdButtonActivated)
     {
       OnButtonsClean();
+      OnButtonDisabledColorChanging("Button 'Â'");
     }
     else
     {
       OnButtonsClean();
       _isThirdButtonActivated = true;
+      OnButtonEnabledColorChanging("Button 'Â'");
     }
   }
   public void OnFourthButtonClick()
@@ -136,11 +143,13 @@ public class MainButtonController : MonoBehaviour
     if (_isFourthButtonActivated)
     {
       OnButtonsClean();
+      OnButtonDisabledColorChanging("Button 'Ã'");
     }
     else
     {
       OnButtonsClean();
       _isFourthButtonActivated = true;
+      OnButtonEnabledColorChanging("Button 'Ã'");
     }
   }
   public void OnFifthButtonClick()
@@ -148,11 +157,13 @@ public class MainButtonController : MonoBehaviour
     if (_isFifthButtonActivated)
     {
       OnButtonsClean();
+      OnButtonDisabledColorChanging("Button 'Ä'");
     }
     else
     {
       OnButtonsClean();
       _isFifthButtonActivated = true;
+      OnButtonEnabledColorChanging("Button 'Ä'");
     }
   }
   public void OnSixthButtonClick()
@@ -160,11 +171,13 @@ public class MainButtonController : MonoBehaviour
     if (_isSixthButtonActivated)
     {
       OnButtonsClean();
+      OnButtonDisabledColorChanging("Button 'È'");
     }
     else
     {
       OnButtonsClean();
       _isSixthButtonActivated = true;
+      OnButtonEnabledColorChanging("Button 'È'");
     }
   }
   private void OnButtonsClean()
@@ -175,5 +188,21 @@ public class MainButtonController : MonoBehaviour
     _isFourthButtonActivated = false;
     _isFifthButtonActivated = false;
     _isSixthButtonActivated = false;
+    
+    GameObject.Find("Button 'À'").GetComponent<Image>().color = new Color(1, 1, 1);
+    GameObject.Find("Button 'Á'").GetComponent<Image>().color = new Color(1, 1, 1);
+    GameObject.Find("Button 'Â'").GetComponent<Image>().color = new Color(1, 1, 1);
+    GameObject.Find("Button 'Ã'").GetComponent<Image>().color = new Color(1, 1, 1);
+    GameObject.Find("Button 'Ä'").GetComponent<Image>().color = new Color(1, 1, 1);
+    GameObject.Find("Button 'È'").GetComponent<Image>().color = new Color(1, 1, 1);
+  }
+
+  private void OnButtonDisabledColorChanging(String _name)
+  {
+    GameObject.Find(_name).GetComponent<Image>().color = new Color(1, 1, 1);
+  }
+  private void OnButtonEnabledColorChanging(String _name)
+  {
+    GameObject.Find(_name).GetComponent<Image>().color = new Color(0.5921569f, 0.5921569f, 0.5921569f);
   }
 }

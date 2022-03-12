@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class MainCamControll : MonoBehaviour
 {
   private Vector2 _startPos;
-
   private Camera cam;
 
   [SerializeField] private float SpeedOfZoom;
@@ -31,7 +31,7 @@ public class MainCamControll : MonoBehaviour
   [SerializeField] private float _rotationSpeed;
 
   //[SerializeField] private GameObject _list;
-  [SerializeField] private List<GameObject> _textList;
+  public List<GameObject> _textList;
 
   [SerializeField] private GameObject _marker;
 
@@ -43,6 +43,11 @@ public class MainCamControll : MonoBehaviour
 
   [SerializeField] private GameObject _buttonsForFloorChanging;
 
+  [SerializeField] private GameObject _firstFloor;
+  [SerializeField] private GameObject _secondFloor;
+  [SerializeField] private GameObject _thirdFloor;
+  [SerializeField] private GameObject _fourthFloor;
+  
   private void Start()
   {
     cam = GetComponent<Camera>();
@@ -50,8 +55,11 @@ public class MainCamControll : MonoBehaviour
     targetPosy = transform.position.y;
 
     Application.targetFrameRate = 60;
-
-    //_textList = _list.GetComponent<MapColorChanging>()._textList;
+    
+    GetAllChilds(_firstFloor);
+    GetAllChilds(_secondFloor);
+    GetAllChilds(_thirdFloor);
+    GetAllChilds(_fourthFloor);
   }
   private void Update()
   {
@@ -107,10 +115,12 @@ public class MainCamControll : MonoBehaviour
         var _angle = Vector3.SignedAngle(touchSecond.position - touchFirst.position, touchSecondLastPos - touchFirstLastPos, -cam.transform.forward);
         cam.transform.RotateAround(cam.transform.position, -cam.transform.forward, _angle);
       }
+      /*
       foreach (var child in _textList)
       {
         child.transform.rotation = new Quaternion(0, 0, cam.transform.rotation.z, cam.transform.rotation.w);
       }
+      */
       //_marker.transform.rotation = new Quaternion(0, 0, cam.transform.rotation.z, cam.transform.rotation.w);
     }
   
@@ -169,5 +179,13 @@ public class MainCamControll : MonoBehaviour
     XMax = 28.7f;
     YMin = -1.5f;
     YMax = 6;
+  }
+
+  private void GetAllChilds(GameObject child)
+  {
+    for (int i = 0; i < child.transform.childCount; i++)
+    {
+      _textList.Add(child.transform.GetChild(i).gameObject);
+    }
   }
 }

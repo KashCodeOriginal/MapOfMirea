@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Collections;
 using Pathfinding;
 using UnityEngine.UI;
-using UnityEngine.Animations;
 
 
 public class FromToButtonControll : MonoBehaviour
@@ -45,7 +44,6 @@ public class FromToButtonControll : MonoBehaviour
         _endPoint.transform.position = new Vector3(-9.5f, -40, 0);
       }
     }
-
     _wayManager.GetComponent<WayManager>()._isFromInPlace = true;
     _wayManager.GetComponent<WayManager>()._isFromButtonActivated = true;
 
@@ -140,7 +138,7 @@ public class FromToButtonControll : MonoBehaviour
   }
   public bool CanDrawWay(bool first, bool second)
   {
-    if (first == true && second == true)
+    if (first && second)
     {
       return true;
     }

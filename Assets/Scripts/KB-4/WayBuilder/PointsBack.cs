@@ -1,6 +1,5 @@
 using UnityEngine;
 using Pathfinding;
-using UnityEngine.Animations;
 
 public class PointsBack : MonoBehaviour
 {

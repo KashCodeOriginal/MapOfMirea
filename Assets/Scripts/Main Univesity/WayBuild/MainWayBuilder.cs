@@ -100,64 +100,25 @@ public class MainWayBuilder : MonoBehaviour
         _isObjectOnFirstFloor || _tempRoomName2.StartsWith("Кабинет №Г2") || _tempRoomName2.StartsWith("Кабинет №В2") ||
         _tempRoomName2.StartsWith("Кабинет №Б2") || _tempRoomName2.StartsWith("Кабинет №Д2"))
     {
-      _firstFloorButton.onClick.Invoke();
-      for (int i = 0; i < _firstFloor.transform.GetChild(0).transform.childCount; i++)
-      {
-        if (_firstFloor.transform.GetChild(0).transform.GetChild(i).name == _tempRoomName2)
-        {
-          ButtonCheck(button,
-            _firstFloor.transform.GetChild(0).transform.GetChild(i).GetComponent<MeshRenderer>().bounds.center.x,
-            _firstFloor.transform.GetChild(0).transform.GetChild(i).GetComponent<MeshRenderer>().bounds.center.y,
-            14.1f);
-        }
-      }
+      RoomsButtonFloorCheck(_firstFloorButton, button, _tempRoomName2, _firstFloor, 14.1f);
     }
     else if ((_tempRoomName2.StartsWith("Кабинет №А2") && _tempRoomName2 != "Кабинет №А2") || _isObjectOnSecondFloor ||
              _tempRoomName2.StartsWith("Кабинет №Г3") || _tempRoomName2.StartsWith("Кабинет №В3") ||
              _tempRoomName2.StartsWith("Кабинет №Б3") || _tempRoomName2.StartsWith("Кабинет №Д3") ||
              _tempRoomName2.StartsWith("Кабинет №И2"))
     {
-      _secondFloorButton.onClick.Invoke();
-      for (int i = 0; i < _secondFloor.transform.GetChild(0).transform.childCount; i++)
-      {
-        if (_secondFloor.transform.GetChild(0).transform.GetChild(i).name == _tempRoomName2)
-        {
-          ButtonCheck(button,
-            _secondFloor.transform.GetChild(0).transform.GetChild(i).GetComponent<MeshRenderer>().bounds.center.x,
-            _secondFloor.transform.GetChild(0).transform.GetChild(i).GetComponent<MeshRenderer>().bounds.center.y,
-            9.1f);
-        }
-      }
+      RoomsButtonFloorCheck(_secondFloorButton, button, _tempRoomName2, _secondFloor, 9.1f);
     }
     else if ((_tempRoomName2.StartsWith("Кабинет №А3") && _tempRoomName2 != "Кабинет №А3") || _isObjectOnThirdFloor ||
              _tempRoomName2.StartsWith("Кабинет №Г4") || _tempRoomName2.StartsWith("Кабинет №В4") ||
              _tempRoomName2.StartsWith("Кабинет №Б4") || _tempRoomName2.StartsWith("Кабинет №Д4") ||
              _tempRoomName2.StartsWith("Кабинет №И3"))
     {
-      _thirdFloorButton.onClick.Invoke();
-      for (int i = 0; i < _thirdFloor.transform.GetChild(0).transform.childCount; i++)
-      {
-        if (_thirdFloor.transform.GetChild(0).transform.GetChild(i).name == _tempRoomName2)
-        {
-          ButtonCheck(button,
-            _thirdFloor.transform.GetChild(0).transform.GetChild(i).GetComponent<MeshRenderer>().bounds.center.x,
-            _thirdFloor.transform.GetChild(0).transform.GetChild(i).GetComponent<MeshRenderer>().bounds.center.y, 4.1f);
-        }
-      }
+      RoomsButtonFloorCheck(_thirdFloorButton, button, _tempRoomName2, _thirdFloor, 4.1f);
     }
     else if ((_tempRoomName2.StartsWith("Кабинет №А4") && _tempRoomName2 != "Кабинет №А4") || _isObjectOnFourthFloor)
     {
-      _fourthFloorButton.onClick.Invoke();
-      for (int i = 0; i < _fourthFloor.transform.GetChild(0).transform.childCount; i++)
-      {
-        if (_fourthFloor.transform.GetChild(0).transform.GetChild(i).name == _tempRoomName2)
-        {
-          ButtonCheck(button,
-            _fourthFloor.transform.GetChild(0).transform.GetChild(i).GetComponent<MeshRenderer>().bounds.center.x,
-            _fourthFloor.transform.GetChild(0).transform.GetChild(i).GetComponent<MeshRenderer>().bounds.center.y,
-            -0.1f);
-        }
-      }
+      RoomsButtonFloorCheck(_fourthFloorButton, button, _tempRoomName2, _fourthFloor, -0.1f);
     }
   }
 
@@ -217,6 +178,22 @@ public class MainWayBuilder : MonoBehaviour
       if (objects == _tempRoomName || objects == _tempRoomName2)
       {
         IsObjectOnFloor = true;
+      }
+    }
+  }
+
+  public void RoomsButtonFloorCheck(Button _floorButton, Button _gameobjectButton, string _tempRoomName, GameObject _floor, float _posz)
+  {
+    _floorButton.onClick.Invoke();
+    for (int i = 0; i < _floor.transform.GetChild(0).transform.childCount; i++)
+    {
+      if (_floor.transform.GetChild(0).transform.GetChild(i).name == _tempRoomName)
+      {
+        ButtonCheck(_gameobjectButton,
+          _floor.transform.GetChild(0).transform.GetChild(i).GetComponent<MeshRenderer>().bounds.center.x,
+          _floor.transform.GetChild(0).transform.GetChild(i).GetComponent<MeshRenderer>().bounds.center.y,
+          _posz
+          );
       }
     }
   }

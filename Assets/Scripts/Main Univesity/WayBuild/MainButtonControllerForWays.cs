@@ -6,7 +6,7 @@ using TMPro;
 public class MainButtonControllerForWays : MonoBehaviour
 {
   [SerializeField] private MainButtonController _buttonController;
-  private List<String> _allRooms;
+  public List<String> _allRooms;
 
   public TMP_InputField inputFieldFrom;
   public TMP_InputField inputFieldTo;

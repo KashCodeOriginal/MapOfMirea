@@ -182,7 +182,7 @@ public class MainCamControll : MonoBehaviour
   {
     XMin = -28.7f;
     XMax = 28.7f;
-    YMin = -1.5f;
+    YMin = -3.35f;
     YMax = 6;
   }
 

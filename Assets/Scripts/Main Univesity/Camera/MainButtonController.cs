@@ -189,20 +189,20 @@ public class MainButtonController : MonoBehaviour
     _isFifthButtonActivated = false;
     _isSixthButtonActivated = false;
     
-    GameObject.Find("Button 'À'").GetComponent<Image>().color = new Color(1, 1, 1);
-    GameObject.Find("Button 'Á'").GetComponent<Image>().color = new Color(1, 1, 1);
-    GameObject.Find("Button 'Â'").GetComponent<Image>().color = new Color(1, 1, 1);
-    GameObject.Find("Button 'Ã'").GetComponent<Image>().color = new Color(1, 1, 1);
-    GameObject.Find("Button 'Ä'").GetComponent<Image>().color = new Color(1, 1, 1);
-    GameObject.Find("Button 'È'").GetComponent<Image>().color = new Color(1, 1, 1);
+    OnButtonDisabledColorChanging("Button 'À'");
+    OnButtonDisabledColorChanging("Button 'Á'");
+    OnButtonDisabledColorChanging("Button 'Â'");
+    OnButtonDisabledColorChanging("Button 'Ã'");
+    OnButtonDisabledColorChanging("Button 'Ä'");
+    OnButtonDisabledColorChanging("Button 'È'");
   }
 
   private void OnButtonDisabledColorChanging(String _name)
   {
-    GameObject.Find(_name).GetComponent<Image>().color = new Color(1, 1, 1);
+    GameObject.Find(_name).GetComponent<Image>().color = new Color(0.01568628f, 0.2941177f, 0.3019608f);
   }
   private void OnButtonEnabledColorChanging(String _name)
   {
-    GameObject.Find(_name).GetComponent<Image>().color = new Color(0.5921569f, 0.5921569f, 0.5921569f);
+    GameObject.Find(_name).GetComponent<Image>().color = new Color(0, 0.1376325f, 0.1415094f);
   }
 }

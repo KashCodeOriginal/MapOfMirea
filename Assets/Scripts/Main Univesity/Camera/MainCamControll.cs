@@ -30,6 +30,8 @@ public class MainCamControll : MonoBehaviour
 
   [SerializeField] private float _rotationSpeed;
 
+  [SerializeField] private GameObject _drawWay;
+
   //[SerializeField] private GameObject _list;
   public List<GameObject> _textList;
 
@@ -60,6 +62,9 @@ public class MainCamControll : MonoBehaviour
     GetAllChilds(_secondFloor);
     GetAllChilds(_thirdFloor);
     GetAllChilds(_fourthFloor);
+    
+    _drawWay.SetActive(true);
+    StartCoroutine(AllRoomsGetterTimer());
   }
   private void Update()
   {
@@ -115,13 +120,13 @@ public class MainCamControll : MonoBehaviour
         var _angle = Vector3.SignedAngle(touchSecond.position - touchFirst.position, touchSecondLastPos - touchFirstLastPos, -cam.transform.forward);
         cam.transform.RotateAround(cam.transform.position, -cam.transform.forward, _angle);
       }
-      /*
+
       foreach (var child in _textList)
       {
         child.transform.rotation = new Quaternion(0, 0, cam.transform.rotation.z, cam.transform.rotation.w);
       }
-      */
-      //_marker.transform.rotation = new Quaternion(0, 0, cam.transform.rotation.z, cam.transform.rotation.w);
+      
+      _marker.transform.rotation = new Quaternion(0, 0, cam.transform.rotation.z, cam.transform.rotation.w);
     }
   
     if (Input.touchCount == 0)
@@ -187,5 +192,11 @@ public class MainCamControll : MonoBehaviour
     {
       _textList.Add(child.transform.GetChild(i).gameObject);
     }
+  }
+
+  IEnumerator AllRoomsGetterTimer()
+  {
+    yield return 0.1f;
+    _drawWay.SetActive(false);
   }
 }

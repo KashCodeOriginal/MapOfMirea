@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -23,7 +24,7 @@ public class MainWayBuilder : MonoBehaviour
   private Button _fourthFloorButton;
   private GameObject _fourthFloor;
 
-  public string[] _firstFloorObject =
+  private string[] _firstFloorObjects =
   {
     "Гардероб Библиотека", "Мед.Пункт А107", "СпортКомплекс",
     "Столовая 1 Этаж", "Туалет Ж Библиотека", "Туалет М Библиотека",
@@ -31,7 +32,7 @@ public class MainWayBuilder : MonoBehaviour
     "Туалет Б205", "Туалет В216", "Туалет Д206"
   };
 
-  public string[] _secondFloorObject =
+  private string[] _secondFloorObjects =
   {
     "Кабинет №А8", "Кабинет №А7", "Кабинет №А6", "Кабинет №А5", "Кабинет №А4", "Кабинет №А3", "Кабинет №А2",
     "Кабинет №А1", "Буфет А213", "Буфет А214", "Буфет Б313", "Буфет В306",
@@ -41,7 +42,7 @@ public class MainWayBuilder : MonoBehaviour
     "Туалет М/Ж В301", "Туалет М/Ж Г327", "Туалет М/Ж Д315"
   };
 
-  public string[] _thirdFloorObject =
+  private string[] _thirdFloorObjects =
   {
     "Кабинет №А18", "Кабинет №А17", "Кабинет №А16", "Кабинет №А15", "Кабинет №А14", "Кабинет №А13", "Кабинет №А12",
     "Кабинет №А11", "Кабинет №А10", "Кабинет №А9", "Приемная Д401(б)", "Приемная Д403(б)",
@@ -50,7 +51,7 @@ public class MainWayBuilder : MonoBehaviour
     "Туалет М/Ж Д403(Б)", "Туалет М/Ж И216", "Учительская"
   };
 
-  public string[] _fourthFloorObject = {"Туалет Ж А412", "Туалет М А412", "Туалет М А425"};
+  private string[] _fourthFloorObjects = {"Туалет Ж А412", "Туалет М А412", "Туалет М А425"};
 
   private bool _isObjectOnFirstFloor;
   private bool _isObjectOnSecondFloor;
@@ -84,13 +85,13 @@ public class MainWayBuilder : MonoBehaviour
     Button button = gameObject.GetComponent<Button>();
     getItemText = button.GetComponentInChildren<TextMeshProUGUI>();
 
-    string _tempRoomName2 = $"Кабинет №{getItemText.text}";
-    string _tempRoomName = getItemText.text;
-    
-    ButtonFloorCheck(_tempRoomName, _tempRoomName2,_firstFloorObject, ref _isObjectOnFirstFloor);
-    ButtonFloorCheck(_tempRoomName, _tempRoomName2,_secondFloorObject,ref _isObjectOnSecondFloor);
-    ButtonFloorCheck(_tempRoomName, _tempRoomName2,_thirdFloorObject,ref _isObjectOnThirdFloor);
-    ButtonFloorCheck(_tempRoomName, _tempRoomName2,_fourthFloorObject,ref _isObjectOnFourthFloor);
+      string _tempRoomName2 = $"Кабинет №{getItemText.text}";
+      string _tempRoomName = getItemText.text;
+      
+      ButtonFloorCheck(_tempRoomName, _tempRoomName2,_firstFloorObjects, ref _isObjectOnFirstFloor);
+      ButtonFloorCheck(_tempRoomName, _tempRoomName2,_secondFloorObjects,ref _isObjectOnSecondFloor);
+      ButtonFloorCheck(_tempRoomName, _tempRoomName2,_thirdFloorObjects,ref _isObjectOnThirdFloor);
+      ButtonFloorCheck(_tempRoomName, _tempRoomName2,_fourthFloorObjects,ref _isObjectOnFourthFloor);
 
     if ((_tempRoomName2.StartsWith("Кабинет №А1") && _tempRoomName2 != "Кабинет №А1" &&
          _tempRoomName2 != "Кабинет №А10" && _tempRoomName2 != "Кабинет №А11" && _tempRoomName2 != "Кабинет №А12" &&
@@ -99,25 +100,25 @@ public class MainWayBuilder : MonoBehaviour
         _isObjectOnFirstFloor || _tempRoomName2.StartsWith("Кабинет №Г2") || _tempRoomName2.StartsWith("Кабинет №В2") ||
         _tempRoomName2.StartsWith("Кабинет №Б2") || _tempRoomName2.StartsWith("Кабинет №Д2"))
     {
-      RoomsButtonFloorCheck(_firstFloorButton, button, _tempRoomName2,_tempRoomName, _firstFloor, 14.1f);
+      RoomsButtonFloorCheck(_firstFloorButton, button, _tempRoomName2, _firstFloor, 14.1f);
     }
     else if ((_tempRoomName2.StartsWith("Кабинет №А2") && _tempRoomName2 != "Кабинет №А2") || _isObjectOnSecondFloor ||
              _tempRoomName2.StartsWith("Кабинет №Г3") || _tempRoomName2.StartsWith("Кабинет №В3") ||
              _tempRoomName2.StartsWith("Кабинет №Б3") || _tempRoomName2.StartsWith("Кабинет №Д3") ||
              _tempRoomName2.StartsWith("Кабинет №И2"))
     {
-      RoomsButtonFloorCheck(_secondFloorButton, button, _tempRoomName2, _tempRoomName,_secondFloor, 9.1f);
+      RoomsButtonFloorCheck(_secondFloorButton, button, _tempRoomName2, _secondFloor, 9.1f);
     }
     else if ((_tempRoomName2.StartsWith("Кабинет №А3") && _tempRoomName2 != "Кабинет №А3") || _isObjectOnThirdFloor ||
              _tempRoomName2.StartsWith("Кабинет №Г4") || _tempRoomName2.StartsWith("Кабинет №В4") ||
              _tempRoomName2.StartsWith("Кабинет №Б4") || _tempRoomName2.StartsWith("Кабинет №Д4") ||
              _tempRoomName2.StartsWith("Кабинет №И3"))
     {
-      RoomsButtonFloorCheck(_thirdFloorButton, button, _tempRoomName2, _tempRoomName,_thirdFloor, 4.1f);
+      RoomsButtonFloorCheck(_thirdFloorButton, button, _tempRoomName2, _thirdFloor, 4.1f);
     }
     else if ((_tempRoomName2.StartsWith("Кабинет №А4") && _tempRoomName2 != "Кабинет №А4") || _isObjectOnFourthFloor)
     {
-      RoomsButtonFloorCheck(_fourthFloorButton, button, _tempRoomName2, _tempRoomName,_fourthFloor, -0.1f);
+      RoomsButtonFloorCheck(_fourthFloorButton, button, _tempRoomName2, _fourthFloor, -0.1f);
     }
   }
 
@@ -143,7 +144,10 @@ public class MainWayBuilder : MonoBehaviour
 
       _wayManager.GetComponent<WayManager>()._isFromButtonActivated = true;
 
-      TrailRendererDestroyer();
+      if (AI.GetComponentInChildren<TrailRenderer>() != null)
+      {
+        Destroy(AI.GetComponentInChildren<TrailRenderer>());
+      }
     }
 
     if (button.tag == "WayButtonsTo")
@@ -160,7 +164,10 @@ public class MainWayBuilder : MonoBehaviour
 
       _wayManager.GetComponent<WayManager>()._isToButtonActivated = true;
 
-      TrailRendererDestroyer();
+      if (AI.GetComponentInChildren<TrailRenderer>() != null)
+      {
+        Destroy(AI.GetComponentInChildren<TrailRenderer>());
+      }
     }
   }
 
@@ -175,12 +182,12 @@ public class MainWayBuilder : MonoBehaviour
     }
   }
 
-  public void RoomsButtonFloorCheck(Button _floorButton, Button _gameobjectButton, string _tempRoomName,string _tempRoomName2, GameObject _floor, float _posz)
+  public void RoomsButtonFloorCheck(Button _floorButton, Button _gameobjectButton, string _tempRoomName, GameObject _floor, float _posz)
   {
     _floorButton.onClick.Invoke();
     for (int i = 0; i < _floor.transform.GetChild(0).transform.childCount; i++)
     {
-      if (_floor.transform.GetChild(0).transform.GetChild(i).name == _tempRoomName || _floor.transform.GetChild(0).transform.GetChild(i).name == _tempRoomName2)
+      if (_floor.transform.GetChild(0).transform.GetChild(i).name == _tempRoomName)
       {
         ButtonCheck(_gameobjectButton,
           _floor.transform.GetChild(0).transform.GetChild(i).GetComponent<MeshRenderer>().bounds.center.x,
@@ -188,14 +195,6 @@ public class MainWayBuilder : MonoBehaviour
           _posz
           );
       }
-    }
-  }
-
-  public void TrailRendererDestroyer()
-  {
-    if (AI.GetComponentInChildren<TrailRenderer>() != null)
-    {
-      Destroy(AI.GetComponentInChildren<TrailRenderer>());
     }
   }
 }

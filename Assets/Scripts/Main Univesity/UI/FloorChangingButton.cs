@@ -38,7 +38,7 @@ public class FloorChangingButton : MonoBehaviour
       _secondFloor.GetComponent<Animation>().Play("SecondFloor");
       _secondFloorCanvas.SetActive(true);
 
-      _camera.transform.position = new Vector3(_camera.transform.position.x, _camera.transform.position.y, 5);
+      _camera.transform.position = new Vector3(_camera.transform.position.x, _camera.transform.position.y, 4);
     }
   }
   public void OnThirdFloorClick()
@@ -61,7 +61,7 @@ public class FloorChangingButton : MonoBehaviour
       _fourthFloor.GetComponent<Animation>().Play("FourthFloor");
       _fourthFloorCanvas.SetActive(true);
 
-      _camera.transform.position = new Vector3(_camera.transform.position.x, _camera.transform.position.y, -2);
+      _camera.transform.position = new Vector3(_camera.transform.position.x, _camera.transform.position.y, -3);
     }
   }
   public void AllFloorsClean()

@@ -33,6 +33,7 @@ public class MainButtonControllerForWays : MonoBehaviour
     {
       GameObject.Destroy(child.gameObject);
     }
+
     _inputFieldFromText = inputFieldFrom.text;
 
     for (int i = 0; i < _allRooms.Count; i++)

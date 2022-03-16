@@ -39,7 +39,7 @@ public class FromToButtonControll : MonoBehaviour
     {
       Destroy(_ai.GetComponentInChildren<TrailRenderer>());
       _cancelWayButtonAnim.Play("CancelWayButtonDown");
-      if(_wayManager.GetComponent<WayManager>()._isFromInPlace)
+      if(_wayManager.GetComponent<WayManager>()._isFromInPlace == true)
       {
         _endPoint.transform.position = new Vector3(-9.5f, -40, 0);
       }
@@ -47,7 +47,7 @@ public class FromToButtonControll : MonoBehaviour
     _wayManager.GetComponent<WayManager>()._isFromInPlace = true;
     _wayManager.GetComponent<WayManager>()._isFromButtonActivated = true;
 
-    if (CanDrawWay(_wayManager.GetComponent<WayManager>()._isFromButtonActivated, _wayManager.GetComponent<WayManager>()._isToButtonActivated))
+    if (CanDrawWay(_wayManager.GetComponent<WayManager>()._isFromButtonActivated, _wayManager.GetComponent<WayManager>()._isToButtonActivated) == true)
     {
       StartCoroutine(Timer());
     }
@@ -70,7 +70,7 @@ public class FromToButtonControll : MonoBehaviour
     {
       _cancelWayButtonAnim.Play("CancelWayButtonDown");
       Destroy(_ai.GetComponentInChildren<TrailRenderer>());
-      if(_wayManager.GetComponent<WayManager>()._isToInPlace)
+      if(_wayManager.GetComponent<WayManager>()._isToInPlace == true)
       {
         _startPoint.transform.position = new Vector3(-9, -40, -0.1f);
       }
@@ -80,7 +80,7 @@ public class FromToButtonControll : MonoBehaviour
 
     _wayManager.GetComponent<WayManager>()._isToButtonActivated = true;
 
-    if (CanDrawWay(_wayManager.GetComponent<WayManager>()._isFromButtonActivated, _wayManager.GetComponent<WayManager>()._isToButtonActivated))
+    if (CanDrawWay(_wayManager.GetComponent<WayManager>()._isFromButtonActivated, _wayManager.GetComponent<WayManager>()._isToButtonActivated) == true)
     {
       StartCoroutine(Timer());
     }

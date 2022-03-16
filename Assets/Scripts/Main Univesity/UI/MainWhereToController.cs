@@ -16,6 +16,7 @@ public class MainWhereToController : MonoBehaviour
         _marker.transform.position = new Vector3(gameObject.GetComponent<Renderer>().bounds.center.x,gameObject.GetComponent<Renderer>().bounds.center.y + 0.3f, gameObject.transform.position.z);
         _marker.GetComponentInChildren<Animation>().Play("MarkerUpDown");
     }
+
     private void ObjectInfoGetter()
     {
         switch (gameObject.GetComponent<RoomsSorting>().RoomType)

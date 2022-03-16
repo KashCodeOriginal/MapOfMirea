@@ -18,6 +18,7 @@ public class MainDrawWay : MonoBehaviour
 
   [SerializeField] private GameObject _universalMenu;
   [SerializeField] private GameObject _cancel;
+  [SerializeField] private GameObject _drawWayButton;
 
   [SerializeField] private GameObject _camera;
 
@@ -58,7 +59,6 @@ public class MainDrawWay : MonoBehaviour
           _cancel.GetComponent<ListCleaner>().OnClick();
 
           _camera.GetComponent<MainCamControll>().targetPosx = Start.transform.position.x;
-
           switch (Start.transform.position.z)
           {
             case 14.1f:
@@ -98,7 +98,9 @@ public class MainDrawWay : MonoBehaviour
           GameObject.FindWithTag("TextTo").GetComponent<CustomInputField>().UpdateState();
 
           _cancel.GetComponent<ListCleaner>().OnClick();
-          
+
+          _drawWayButton.GetComponent<Button>().enabled = false;
+
           _isWayDrawn = true;
 
           _wayManager.GetComponent<WayManager>()._isFromButtonActivated = false;

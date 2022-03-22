@@ -14,6 +14,7 @@ public class MainDrawWay : MonoBehaviour
   [SerializeField] Material GreenWay;
 
   [SerializeField] private GameObject _cancelWayButton;
+  [SerializeField] private GameObject _wayDetails;
   [SerializeField] private GameObject Trail;
 
   [SerializeField] private GameObject _universalMenu;
@@ -91,6 +92,7 @@ public class MainDrawWay : MonoBehaviour
           AI.GetComponent<AILerp>().enabled = true;
 
           _cancelWayButton.GetComponent<Animation>().Play("CancelWayButtonUp");
+          _wayDetails.GetComponent<Animation>().Play("WayDetailsUp");
 
           GameObject.FindWithTag("TextFrom").GetComponent<TMP_InputField>().text = "";
           GameObject.FindWithTag("TextFrom").GetComponent<CustomInputField>().UpdateState();

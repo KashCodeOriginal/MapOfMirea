@@ -1,3 +1,4 @@
+using System.Linq.Expressions;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -22,6 +23,7 @@ public class MainWayBuilder : MonoBehaviour
   private GameObject _thirdFloor;
   private Button _fourthFloorButton;
   private GameObject _fourthFloor;
+  private GameObject _wayDetails;
 
   public string[] _firstFloorObject =
   {
@@ -77,6 +79,8 @@ public class MainWayBuilder : MonoBehaviour
     _thirdFloorButton = GameObject.FindWithTag("ThirdFloorButton").GetComponent<Button>();
     _fourthFloor = GameObject.FindWithTag("FourthFloor");
     _fourthFloorButton = GameObject.FindWithTag("FourthFloorButton").GetComponent<Button>();
+    
+    _wayDetails = GameObject.FindWithTag("WayDetails");
   }
 
   public void WayDrawing()
@@ -121,7 +125,7 @@ public class MainWayBuilder : MonoBehaviour
     }
   }
 
-  public void ButtonCheck(Button button, float posx, float posy, float posz)
+  public void ButtonCheck(Button button, float posx, float posy, float posz, GameObject _floor)
   {
     if (button.tag == "WayButtonsFrom")
     {
@@ -144,6 +148,26 @@ public class MainWayBuilder : MonoBehaviour
       _wayManager.GetComponent<WayManager>()._isFromButtonActivated = true;
 
       TrailRendererDestroyer();
+      
+      _wayDetails.GetComponent<WayDetailsController>().AddPointToWayDetails(getItemText.text);
+      
+
+      if (_floor.name == "1")
+      {
+        _wayDetails.GetComponent<WayDetailsController>().AddPointToWayDetails("Маршрут на первом этаже");
+      }
+      if (_floor.name == "2")
+      {
+        _wayDetails.GetComponent<WayDetailsController>().AddPointToWayDetails("Маршрут на втором этаже");
+      }
+      if (_floor.name == "3")
+      {
+        _wayDetails.GetComponent<WayDetailsController>().AddPointToWayDetails("Маршрут на третьем этаже");
+      }
+      if (_floor.name == "4")
+      {
+        _wayDetails.GetComponent<WayDetailsController>().AddPointToWayDetails("Маршрут на четвертом этаже");
+      }
     }
 
     if (button.tag == "WayButtonsTo")
@@ -185,7 +209,7 @@ public class MainWayBuilder : MonoBehaviour
         ButtonCheck(_gameobjectButton,
           _floor.transform.GetChild(0).transform.GetChild(i).GetComponent<MeshRenderer>().bounds.center.x,
           _floor.transform.GetChild(0).transform.GetChild(i).GetComponent<MeshRenderer>().bounds.center.y,
-          _posz
+          _posz, _floor
           );
       }
     }

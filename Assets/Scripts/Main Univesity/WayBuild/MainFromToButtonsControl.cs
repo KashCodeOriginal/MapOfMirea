@@ -16,11 +16,13 @@ public class MainFromToButtonsControl : MonoBehaviour
     [SerializeField] private GameObject _whereToPanelCancel;
 
     [SerializeField] private Animation _cancelWayButtonAnim;
+    [SerializeField] private WayDetailsController _wayDetailsController;
 
     [SerializeField] private TMP_InputField _textFrom;
     [SerializeField] private TMP_InputField _textTo;
 
     [SerializeField] private GameObject _whereToPanel;
+    
 
     private GameObject _room;
     public void OnFromClick()
@@ -59,6 +61,12 @@ public class MainFromToButtonsControl : MonoBehaviour
         {
             _whereToPanel.GetComponent<Animation>().Play("WhereToDown");
         }
+        
+        _wayDetailsController.AddPointToWayDetails(_textFrom.text);
+        
+        Debug.Log(_room.GetComponent<Renderer>().bounds.center.z);
+        
+        
     }
 
     public void OnToCLick()

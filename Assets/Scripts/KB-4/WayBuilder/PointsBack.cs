@@ -10,6 +10,7 @@ public class PointsBack : MonoBehaviour
   [SerializeField] private GameObject AI;
 
   [SerializeField] private GameObject _cancelWayButton;
+  [SerializeField] private GameObject _wayDetails;
 
   [SerializeField] private GameObject _wayManager;
   public void OnClick()
@@ -23,5 +24,6 @@ public class PointsBack : MonoBehaviour
     Destroy(Trail.GetComponent<TrailRenderer>());
 
     _cancelWayButton.GetComponent<Animation>().Play("CancelWayButtonDown");
+    _wayDetails.GetComponent<Animation>().Play("WayDetailsDown");
   }
 }

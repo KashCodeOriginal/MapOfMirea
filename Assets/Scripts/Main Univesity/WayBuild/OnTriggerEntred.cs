@@ -106,6 +106,18 @@ public class OnTriggerEntred : MonoBehaviour
             case "32":
                 DirectionCheck(col,$"{_directionPhrases[9]} ó À18 ",$"{_directionPhrases[8]} ó À426");
                 break;
+            case "FirstFloor":
+                AddFloorPoint(_directionPhrases[0]);
+                break;
+            case "SecondFloor":
+                AddFloorPoint(_directionPhrases[1]);
+                break;
+            case "ThirdFloor":
+                AddFloorPoint(_directionPhrases[2]);
+                break;
+            case "FourthFloor":
+                AddFloorPoint(_directionPhrases[3]);
+                break;
         }
     }
     //DirectionCheck(col,"","");
@@ -127,6 +139,11 @@ public class OnTriggerEntred : MonoBehaviour
         _wayDetails.AddPointToWayDetails(_text);
     }
     private void OnDirectionSecond(string _text)
+    {
+        _wayDetails.AddPointToWayDetails(_text);
+    }
+
+    private void AddFloorPoint(string _text)
     {
         _wayDetails.AddPointToWayDetails(_text);
     }

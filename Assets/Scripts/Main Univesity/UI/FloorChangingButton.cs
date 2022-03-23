@@ -49,7 +49,7 @@ public class FloorChangingButton : MonoBehaviour
       _thirdFloor.GetComponent<Animation>().Play("ThirdFloor");
       _thirdFloorCanvas.SetActive(true);
 
-      _camera.transform.position = new Vector3(_camera.transform.position.x, _camera.transform.position.y, -1);
+      _camera.transform.position = new Vector3(_camera.transform.position.x, _camera.transform.position.y, 1);
     }
     
   }

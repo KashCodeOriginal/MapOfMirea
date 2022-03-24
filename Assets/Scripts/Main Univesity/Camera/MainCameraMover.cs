@@ -107,7 +107,7 @@ public class MainCameraMover : MonoBehaviour
       _firstFloorButton.onClick.Invoke();
       for (int i = 0; i < _firstFloor.transform.GetChild(0).transform.childCount; i++)
       {
-        if (_firstFloor.transform.GetChild(0).transform.GetChild(i).name == _tempRoomName || _secondFloor.transform.GetChild(0).transform.GetChild(i).name == _tempRoomNameSecond)
+        if (_firstFloor.transform.GetChild(0).transform.GetChild(i).name == _tempRoomName || _firstFloor.transform.GetChild(0).transform.GetChild(i).name == _tempRoomNameSecond)
         {
           _posx = _firstFloor.transform.GetChild(0).transform.GetChild(i).GetComponent<MeshRenderer>().bounds.center.x;
           _posy = _firstFloor.transform.GetChild(0).transform.GetChild(i).GetComponent<MeshRenderer>().bounds.center.y;
@@ -137,7 +137,7 @@ public class MainCameraMover : MonoBehaviour
       _thirdFloorButton.onClick.Invoke();
       for (int i = 0; i < _thirdFloor.transform.GetChild(0).transform.childCount; i++)
       {
-        if (_thirdFloor.transform.GetChild(0).transform.GetChild(i).name == _tempRoomName || _secondFloor.transform.GetChild(0).transform.GetChild(i).name == _tempRoomNameSecond)
+        if (_thirdFloor.transform.GetChild(0).transform.GetChild(i).name == _tempRoomName || _thirdFloor.transform.GetChild(0).transform.GetChild(i).name == _tempRoomNameSecond)
         {
           _posx = _thirdFloor.transform.GetChild(0).transform.GetChild(i).GetComponent<MeshRenderer>().bounds.center.x;
           _posy = _thirdFloor.transform.GetChild(0).transform.GetChild(i).GetComponent<MeshRenderer>().bounds.center.y;
@@ -152,7 +152,7 @@ public class MainCameraMover : MonoBehaviour
       _fourthFloorButton.onClick.Invoke();
       for (int i = 0; i < _fourthFloor.transform.GetChild(0).transform.childCount; i++)
       {
-        if (_fourthFloor.transform.GetChild(0).transform.GetChild(i).name == _tempRoomName || _secondFloor.transform.GetChild(0).transform.GetChild(i).name == _tempRoomNameSecond)
+        if (_fourthFloor.transform.GetChild(0).transform.GetChild(i).name == _tempRoomName || _fourthFloor.transform.GetChild(0).transform.GetChild(i).name == _tempRoomNameSecond)
         {
           _posx = _fourthFloor.transform.GetChild(0).transform.GetChild(i).GetComponent<MeshRenderer>().bounds.center.x;
           _posy = _fourthFloor.transform.GetChild(0).transform.GetChild(i).GetComponent<MeshRenderer>().bounds.center.y;

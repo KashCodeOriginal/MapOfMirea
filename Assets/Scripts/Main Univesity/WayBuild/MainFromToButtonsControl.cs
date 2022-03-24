@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Pathfinding;
 using UnityEngine;
@@ -22,14 +23,12 @@ public class MainFromToButtonsControl : MonoBehaviour
     [SerializeField] private TMP_InputField _textTo;
 
     [SerializeField] private GameObject _whereToPanel;
-    
-
     private GameObject _room;
     public void OnFromClick()
     {
         _room = GameObject.Find(_classRoomNumber.text);
-        
-        _startPoint.transform.position = new Vector3(_room.GetComponent<Renderer>().bounds.center.x,_room.GetComponent<Renderer>().bounds.center.y,_room.GetComponent<Renderer>().bounds.center.z);
+
+        _startPoint.transform.position = new Vector3(_room.GetComponent<Renderer>().bounds.center.x,_room.GetComponent<Renderer>().bounds.center.y, Mathf.Round(_room.GetComponent<Renderer>().bounds.center.z) + 0.1f);
         _startPoint.GetComponent<Animation>().Play("StartPutting");
         
         _textFrom.text = _classRoomNumber.text.Replace("Кабинет №", "");
@@ -44,6 +43,7 @@ public class MainFromToButtonsControl : MonoBehaviour
             
             //_ai.GetComponent<AILerp>().enabled = false;
             //_ai.transform.position = _startPoint.transform.position;
+            
             if(_wayManager.GetComponent<WayManager>()._isFromInPlace)
             {
                 _endPoint.transform.position = new Vector3(-9.5f, -40, 0);
@@ -65,8 +65,6 @@ public class MainFromToButtonsControl : MonoBehaviour
         _wayDetailsController.AddPointToWayDetails(_textFrom.text);
         
         Debug.Log(_room.GetComponent<Renderer>().bounds.center.z);
-        
-        
     }
 
     public void OnToCLick()

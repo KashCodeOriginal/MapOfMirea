@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using Pathfinding;
 using TMPro;
@@ -59,29 +60,31 @@ public class MainDrawWay : MonoBehaviour
           _cancel.GetComponent<ListCleaner>().OnClick();
 
           _camera.GetComponent<MainCamControll>().targetPosx = Start.transform.position.x;
+          _camera.GetComponent<MainCamControll>().targetPosy = Start.transform.position.y;
 
-          switch (Start.transform.position.z)
+          if (Start.transform.position.z == 14.1f)
           {
-            case 14.1f:
-              _floorChangingButton.GetComponent<FloorChangingButton>().OnFirstFloorClick();
-              break;
-            case 9.1f:
-              _floorChangingButton.GetComponent<FloorChangingButton>().OnSecondFloorClick();
-              break;  
-            case 4.1f:
-              _floorChangingButton.GetComponent<FloorChangingButton>().OnThirdFloorClick();
-              break;
-            case -0.1f:
-              _floorChangingButton.GetComponent<FloorChangingButton>().OnFourthFloorClick();
-              break;
+            _floorChangingButton.GetComponent<FloorChangingButton>().OnFirstFloorClick();
+          }
+          else if (Start.transform.position.z == 9.1f)
+          {
+            _floorChangingButton.GetComponent<FloorChangingButton>().OnSecondFloorClick();
+          }
+          else if (Start.transform.position.z == 4.1f)
+          {
+            _floorChangingButton.GetComponent<FloorChangingButton>().OnThirdFloorClick();
+          }
+          else if (Start.transform.position.z == -0.1f || Start.transform.position.z == 0.1f)
+          {
+            _floorChangingButton.GetComponent<FloorChangingButton>().OnFourthFloorClick();
           }
 
           AI.GetComponent<AILerp>().canMove = true;
 
           NewTrails = Trail.AddComponent<TrailRenderer>();
           NewTrails.time = 99999;
-          NewTrails.startWidth = 0.15f;
-          NewTrails.endWidth = 0.15f;
+          NewTrails.startWidth = 0.2f;
+          NewTrails.endWidth = 0.2f;
           NewTrails.minVertexDistance = 0.001f;
           NewTrails.autodestruct = true;
           NewTrails.material = GreenWay;

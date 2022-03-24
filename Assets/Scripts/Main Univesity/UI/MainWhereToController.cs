@@ -13,7 +13,7 @@ public class MainWhereToController : MonoBehaviour
         _numberOfClassroom.GetComponent<TMP_Text>().text = gameObject.name;
         ObjectInfoGetter();
 
-        _marker.transform.position = new Vector3(gameObject.GetComponent<Renderer>().bounds.center.x,gameObject.GetComponent<Renderer>().bounds.center.y + 0.3f, gameObject.transform.position.z);
+        _marker.transform.position = new Vector3(gameObject.GetComponent<Renderer>().bounds.center.x,gameObject.GetComponent<Renderer>().bounds.center.y + 0.3f, gameObject.transform.position.z - 0.1f);
         _marker.GetComponentInChildren<Animation>().Play("MarkerUpDown");
     }
     private void ObjectInfoGetter()

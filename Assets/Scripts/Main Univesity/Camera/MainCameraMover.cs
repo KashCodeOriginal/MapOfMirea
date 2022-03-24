@@ -107,11 +107,13 @@ public class MainCameraMover : MonoBehaviour
       _firstFloorButton.onClick.Invoke();
       for (int i = 0; i < _firstFloor.transform.GetChild(0).transform.childCount; i++)
       {
-        if (_firstFloor.transform.GetChild(0).transform.GetChild(i).name == _tempRoomName)
+        if (_firstFloor.transform.GetChild(0).transform.GetChild(i).name == _tempRoomName || _secondFloor.transform.GetChild(0).transform.GetChild(i).name == _tempRoomNameSecond)
         {
           _posx = _firstFloor.transform.GetChild(0).transform.GetChild(i).GetComponent<MeshRenderer>().bounds.center.x;
           _posy = _firstFloor.transform.GetChild(0).transform.GetChild(i).GetComponent<MeshRenderer>().bounds.center.y;
           _posz = _firstFloor.transform.GetChild(0).transform.GetChild(i).transform.position.z;
+
+          _firstFloor.transform.GetChild(0).transform.GetChild(i).GetComponent<Button>().onClick.Invoke();
         }
       }
     }
@@ -120,11 +122,13 @@ public class MainCameraMover : MonoBehaviour
       _secondFloorButton.onClick.Invoke();
       for (int i = 0; i < _secondFloor.transform.GetChild(0).transform.childCount; i++)
       {
-        if (_secondFloor.transform.GetChild(0).transform.GetChild(i).name == _tempRoomName)
+        if (_secondFloor.transform.GetChild(0).transform.GetChild(i).name == _tempRoomName || _secondFloor.transform.GetChild(0).transform.GetChild(i).name == _tempRoomNameSecond)
         {
           _posx = _secondFloor.transform.GetChild(0).transform.GetChild(i).GetComponent<MeshRenderer>().bounds.center.x;
           _posy = _secondFloor.transform.GetChild(0).transform.GetChild(i).GetComponent<MeshRenderer>().bounds.center.y;
           _posz = _secondFloor.transform.GetChild(0).transform.GetChild(i).transform.position.z;
+          
+          _secondFloor.transform.GetChild(0).transform.GetChild(i).GetComponent<Button>().onClick.Invoke();
         }
       }
     }
@@ -133,11 +137,13 @@ public class MainCameraMover : MonoBehaviour
       _thirdFloorButton.onClick.Invoke();
       for (int i = 0; i < _thirdFloor.transform.GetChild(0).transform.childCount; i++)
       {
-        if (_thirdFloor.transform.GetChild(0).transform.GetChild(i).name == _tempRoomName)
+        if (_thirdFloor.transform.GetChild(0).transform.GetChild(i).name == _tempRoomName || _secondFloor.transform.GetChild(0).transform.GetChild(i).name == _tempRoomNameSecond)
         {
           _posx = _thirdFloor.transform.GetChild(0).transform.GetChild(i).GetComponent<MeshRenderer>().bounds.center.x;
           _posy = _thirdFloor.transform.GetChild(0).transform.GetChild(i).GetComponent<MeshRenderer>().bounds.center.y;
           _posz = _thirdFloor.transform.GetChild(0).transform.GetChild(i).transform.position.z;
+          
+          _thirdFloor.transform.GetChild(0).transform.GetChild(i).GetComponent<Button>().onClick.Invoke();
         }
       }
     }
@@ -146,15 +152,16 @@ public class MainCameraMover : MonoBehaviour
       _fourthFloorButton.onClick.Invoke();
       for (int i = 0; i < _fourthFloor.transform.GetChild(0).transform.childCount; i++)
       {
-        if (_fourthFloor.transform.GetChild(0).transform.GetChild(i).name == _tempRoomName)
+        if (_fourthFloor.transform.GetChild(0).transform.GetChild(i).name == _tempRoomName || _secondFloor.transform.GetChild(0).transform.GetChild(i).name == _tempRoomNameSecond)
         {
           _posx = _fourthFloor.transform.GetChild(0).transform.GetChild(i).GetComponent<MeshRenderer>().bounds.center.x;
           _posy = _fourthFloor.transform.GetChild(0).transform.GetChild(i).GetComponent<MeshRenderer>().bounds.center.y;
           _posz = _fourthFloor.transform.GetChild(0).transform.GetChild(i).transform.position.z;
+          
+          _fourthFloor.transform.GetChild(0).transform.GetChild(i).GetComponent<Button>().onClick.Invoke();
         }
       }
     }
-
     GameObject.FindGameObjectWithTag("Marker").GetComponent<Animation>().Stop("MarkerUpDown");
     MarkerToPosMover(_posx, _posy, _posz);
     GameObject.FindGameObjectWithTag("Marker").GetComponent<Animation>().Play("MarkerUpDown");
@@ -174,7 +181,7 @@ public class MainCameraMover : MonoBehaviour
   }
   public void MarkerToPosMover(float x, float y, float z)
   {
-    GameObject.FindGameObjectWithTag("MarkerParent").transform.position = new Vector3(x, y + 0.3f, z);
+    GameObject.FindGameObjectWithTag("MarkerParent").transform.position = new Vector3(x, y + 0.3f, z - 0.1f);
   }
   public void MarkerStartPosMover()
   {

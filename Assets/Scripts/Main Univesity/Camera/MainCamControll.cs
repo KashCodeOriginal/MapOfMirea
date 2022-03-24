@@ -28,6 +28,10 @@ public class MainCamControll : MonoBehaviour
   [SerializeField] private float _maxTrailWight = 0.3f;
   [SerializeField] float speedOfTrail;
 
+  [SerializeField] private float _markerMinValue = 0.23f;
+  [SerializeField] private float _markerMaxValue = 0.4f;
+  [SerializeField] private float _markerValueIncrease;
+  
   [SerializeField] private float _rotationSpeed;
 
   [SerializeField] private GameObject _drawWay;
@@ -42,13 +46,14 @@ public class MainCamControll : MonoBehaviour
   private const float TIME_BETWEEN_CLICKS = 0.2f;
 
   private float _rotationAngle;
-
-  [SerializeField] private GameObject _buttonsForFloorChanging;
-
+  
   [SerializeField] private GameObject _firstFloor;
   [SerializeField] private GameObject _secondFloor;
   [SerializeField] private GameObject _thirdFloor;
   [SerializeField] private GameObject _fourthFloor;
+
+  [SerializeField] private float _increment;
+  [SerializeField] private GameObject _markerMain;
   
   private void Start()
   {
@@ -113,7 +118,7 @@ public class MainCamControll : MonoBehaviour
 
       float difference = distanceTouch - currentDistance;
 
-      Zoom(difference * SpeedOfZoom, difference * speedOfTrail);
+      Zoom(difference * SpeedOfZoom, difference * speedOfTrail, difference * _markerValueIncrease);
 
       if (touchSecondLastPos != touchSecond.position)
       {
@@ -162,7 +167,7 @@ public class MainCamControll : MonoBehaviour
       _marker.transform.rotation = new Quaternion(0, 0, cam.transform.rotation.z, cam.transform.rotation.w);
     }
   }
-  private void Zoom(float increment, float trailIncrement)
+  private void Zoom(float increment, float trailIncrement, float markerIncrement)
   {
     cam.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize + increment, ZoomMin, ZoomMax);
     if (GameObject.FindWithTag("Trail").TryGetComponent(out TrailRenderer renderer))
@@ -170,6 +175,8 @@ public class MainCamControll : MonoBehaviour
       renderer.startWidth = Mathf.Clamp(renderer.startWidth + (trailIncrement / 15000), _minTrailWight, _maxTrailWight);
       renderer.endWidth = Mathf.Clamp(renderer.endWidth + (trailIncrement / 15000), _minTrailWight, _maxTrailWight);
     }
+
+    _markerMain.transform.localScale = new Vector3(Mathf.Clamp(_markerMain.transform.localScale.x + (markerIncrement / _increment), _markerMinValue, _markerMaxValue),Mathf.Clamp(_markerMain.transform.localScale.y + (markerIncrement / _increment), _markerMinValue, _markerMaxValue),1);
   }
   private void OnVerticanRotation()
   {

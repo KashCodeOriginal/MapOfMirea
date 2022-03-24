@@ -41,16 +41,16 @@ public class OnTriggerEntred : MonoBehaviour
                 DirectionCheck(col,$"{_directionPhrases[5]} в самом конце коридора",$"{_directionPhrases[4]} у А203");
                 break;
             case "11":
-                DirectionCheck(col,$"{_directionPhrases[5]} в корпусе Г",$"{_directionPhrases[4]} в корпусе Г");
+                DirectionCheck(col,$"{_directionPhrases[7]} в корпусе Г",$"{_directionPhrases[6]} в корпусе Г");
                 break;
             case "12":
-                DirectionCheck(col,$"{_directionPhrases[5]} в корпусе В",$"{_directionPhrases[4]} в корпусе В");
+                DirectionCheck(col,$"{_directionPhrases[7]} в корпусе В",$"{_directionPhrases[6]} в корпусе В");
                 break;
             case "13":
-                DirectionCheck(col,$"{_directionPhrases[5]} в корпусе Б",$"{_directionPhrases[4]} в корпусе Б");
+                DirectionCheck(col,$"{_directionPhrases[7]} в корпусе Б",$"{_directionPhrases[6]} в корпусе Б");
                 break;
             case "14":
-                DirectionCheck(col,$"{_directionPhrases[5]} в корпусе Д",$"{_directionPhrases[4]} в корпусе Д");
+                DirectionCheck(col,$"{_directionPhrases[7]} в корпусе Д",$"{_directionPhrases[6]} в корпусе Д");
                 break;
             case "15":
                 DirectionCheck(col,$"{_directionPhrases[7]} на третий этаж корпуса И",$"{_directionPhrases[6]} к И200");
@@ -80,16 +80,16 @@ public class OnTriggerEntred : MonoBehaviour
                 DirectionCheck(col,$"{_directionPhrases[7]} у А203",$"{_directionPhrases[6]} у А301");
                 break;
             case "24":
-                DirectionCheck(col,$"{_directionPhrases[7]} в корпусе Г",$"{_directionPhrases[6]} в корпусе Г");
+                DirectionCheck(col,$"{_directionPhrases[9]} в корпусе Г",$"{_directionPhrases[8]} в корпусе Г");
                 break;
             case "25":
-                DirectionCheck(col,$"{_directionPhrases[7]} в корпусе В",$"{_directionPhrases[6]} в корпусе В");
+                DirectionCheck(col,$"{_directionPhrases[9]} в корпусе В",$"{_directionPhrases[8]} в корпусе В");
                 break;
             case "26":
-                DirectionCheck(col,$"{_directionPhrases[7]} в корпусе Б",$"{_directionPhrases[6]} в корпусе Б");
+                DirectionCheck(col,$"{_directionPhrases[9]} в корпусе Б",$"{_directionPhrases[8]} в корпусе Б");
                 break;
             case "27":
-                DirectionCheck(col,$"{_directionPhrases[7]} в корпусе Д",$"{_directionPhrases[6]} в корпусе Д");
+                DirectionCheck(col,$"{_directionPhrases[9]} в корпусе Д",$"{_directionPhrases[8]} в корпусе Д");
                 break;
             case "28":
                 DirectionCheck(col,$"{_directionPhrases[9]} у А336",$"{_directionPhrases[8]} у А426");

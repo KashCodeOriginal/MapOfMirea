@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
+using TMPro;
 
 public class MainCamControll : MonoBehaviour
 {
@@ -76,21 +76,7 @@ public class MainCamControll : MonoBehaviour
     if (Input.GetMouseButtonDown(0))
     {
       _startPos = cam.ScreenToWorldPoint(Input.mousePosition);
-      
-      /*
-      PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
-      eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-      List<RaycastResult> results = new List<RaycastResult>();
-      EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
-      foreach (var go in results)
-      {
-        if (go.gameObject.name == "WayDetailsBackGround")
-        {
-          Debug.Log("Работает)))");
-        }
-      }
-      */
-      /*
+
       float _timeSinceFirstClick = Time.time - _lastClickTime;
 
       if (_timeSinceFirstClick <= TIME_BETWEEN_CLICKS)
@@ -99,17 +85,16 @@ public class MainCamControll : MonoBehaviour
         {
           float _maxZoom = cam.orthographicSize - ZoomMin;
 
-          cam.orthographicSize -= _maxZoom;
+          cam.orthographicSize = cam.orthographicSize - _maxZoom;
         }
         else if (cam.orthographicSize != ZoomMin)
         {
-          cam.orthographicSize -= _stepsOfDoubleTapsZoom;
+          cam.orthographicSize = cam.orthographicSize - _stepsOfDoubleTapsZoom;
         }
       }
-      */
       _lastClickTime = Time.time;
     }
-    else if (Input.GetMouseButton(0) )
+    else if (Input.GetMouseButton(0))
     {
       float posx = cam.ScreenToWorldPoint(Input.mousePosition).x - _startPos.x;
       float posy = cam.ScreenToWorldPoint(Input.mousePosition).y - _startPos.y;
@@ -117,8 +102,9 @@ public class MainCamControll : MonoBehaviour
       targetPosx = Mathf.Clamp(transform.position.x - posx, XMin, XMax);
       targetPosy = Mathf.Clamp(transform.position.y - posy, YMin, YMax);
     }
-    transform.position = new Vector3(Mathf.Lerp(transform.position.x, targetPosx, speed * Time.deltaTime), Mathf.Lerp(transform.position.y, targetPosy, speed * Time.deltaTime), transform.position.z);
-    
+    transform.position = new Vector3(Mathf.Lerp(transform.position.x, targetPosx, speed * Time.deltaTime), transform.position.y, transform.position.z);
+    transform.position = new Vector3(transform.position.x, Mathf.Lerp(transform.position.y, targetPosy, speed * Time.deltaTime), transform.position.z);
+
     if (Input.touchCount == 2)
     {
       Touch touchFirst = Input.GetTouch(0);

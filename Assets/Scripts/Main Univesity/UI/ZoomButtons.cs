@@ -23,7 +23,7 @@ public class ZoomButtons : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (_isPlusDown && _cam.orthographicSize >= 10.5f)
+        if (_isPlusDown && _cam.orthographicSize > 10)
         {
             _cam.orthographicSize = Mathf.Lerp(_cam.orthographicSize, _cam.orthographicSize - _zoomStep, _time);
             _isPlusDown = false;

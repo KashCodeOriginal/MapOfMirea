@@ -23,6 +23,9 @@ public class MainFromToButtonsControl : MonoBehaviour
     [SerializeField] private TMP_InputField _textTo;
 
     [SerializeField] private GameObject _whereToPanel;
+
+    [SerializeField] private GameObject _wayDetails;
+    [SerializeField] private GameObject _wayDetailsButton;
     private GameObject _room;
     public void OnFromClick()
     {
@@ -40,6 +43,10 @@ public class MainFromToButtonsControl : MonoBehaviour
         {
             Destroy(_ai.GetComponentInChildren<TrailRenderer>());
             _cancelWayButtonAnim.Play("CancelWayButtonDown");
+
+            _wayDetailsButton.GetComponent<Animation>().Play("WayDetailsDown");
+            
+            _wayDetails.GetComponent<ListOfDetailsCleaner>().CleanAllButtons();
             
             //_ai.GetComponent<AILerp>().enabled = false;
             //_ai.transform.position = _startPoint.transform.position;
@@ -63,8 +70,6 @@ public class MainFromToButtonsControl : MonoBehaviour
         }
         
         _wayDetailsController.AddPointToWayDetails(_textFrom.text);
-        
-        Debug.Log(_room.GetComponent<Renderer>().bounds.center.z);
     }
 
     public void OnToCLick()
@@ -83,6 +88,10 @@ public class MainFromToButtonsControl : MonoBehaviour
         {
             _cancelWayButtonAnim.Play("CancelWayButtonDown");
             Destroy(_ai.GetComponentInChildren<TrailRenderer>());
+            
+            _wayDetailsButton.GetComponent<Animation>().Play("WayDetailsDown");
+            
+            _wayDetails.GetComponent<ListOfDetailsCleaner>().CleanAllButtons();
             /*
             if(_wayManager.GetComponent<WayManager>()._isToInPlace)
             {

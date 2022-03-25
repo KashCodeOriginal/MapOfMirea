@@ -22,7 +22,7 @@ public class PointsBack : MonoBehaviour
     EndPoint.transform.position = new Vector3(-9.5f, -40, 0);
     _wayManager.GetComponent<WayManager>()._isToInPlace = false;
     Destroy(Trail.GetComponent<TrailRenderer>());
-
+    
     _cancelWayButton.GetComponent<Animation>().Play("CancelWayButtonDown");
     _wayDetails.GetComponent<Animation>().Play("WayDetailsDown");
   }

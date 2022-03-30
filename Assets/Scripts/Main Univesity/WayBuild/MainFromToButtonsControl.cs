@@ -26,12 +26,19 @@ public class MainFromToButtonsControl : MonoBehaviour
 
     [SerializeField] private GameObject _wayDetails;
     [SerializeField] private GameObject _wayDetailsButton;
+
+    [SerializeField] private Camera _camera;
+    
     private GameObject _room;
     public void OnFromClick()
     {
         _room = GameObject.Find(_classRoomNumber.text);
 
-        _startPoint.transform.position = new Vector3(_room.GetComponent<Renderer>().bounds.center.x,_room.GetComponent<Renderer>().bounds.center.y, Mathf.Round(_room.GetComponent<Renderer>().bounds.center.z) + 0.1f);
+        float _zPos = Mathf.Round(_room.GetComponent<Renderer>().bounds.center.z);
+
+        _zPos = (_zPos == 0) ? _zPos - 0.1f : _zPos + 0.1f;
+
+        _startPoint.transform.position = new Vector3(_room.GetComponent<Renderer>().bounds.center.x,_room.GetComponent<Renderer>().bounds.center.y, _zPos);
         _startPoint.GetComponent<Animation>().Play("StartPutting");
         
         _textFrom.text = _classRoomNumber.text.Replace("Кабинет №", "");
@@ -83,6 +90,8 @@ public class MainFromToButtonsControl : MonoBehaviour
         _drawWay.SetActive(true);        
         _textTo.text = _classRoomNumber.text.Replace("Кабинет №","");
         _drawWay.SetActive(false);
+
+        _camera.GetComponent<MainCamControll>()._endPointText = _textTo.text;
 
         if (_ai.GetComponentInChildren<TrailRenderer>() != null)
         {

@@ -5,6 +5,8 @@ public class OnTriggerEntred : MonoBehaviour
 {
     [SerializeField] private WayDetailsController _wayDetails;
 
+    [SerializeField] private Sprite _ladders;
+
     private List<string> _directionPhrases = new List<string>() {"Продолжайте маршрут по первому этажу", "Продолжайте маршрут по второму этажу", "Продолжайте маршрут по третьему этажу", "Продолжайте маршрут по четвертому этажу", "Вниз по лестнице на первый этаж", "Вверх по лестнице на второй этаж", "Вниз по лестнице на второй этаж", "Вверх по лестнице на третий этаж", "Вниз по лестнице на третий этаж", "Вверх по лестнице на четвертый этаж"};    
     private void OnTriggerEnter(Collider col)
     {
@@ -106,18 +108,6 @@ public class OnTriggerEntred : MonoBehaviour
             case "32":
                 DirectionCheck(col,$"{_directionPhrases[9]} у А18 ",$"{_directionPhrases[8]} у А426");
                 break;
-            case "FirstFloor":
-                AddFloorPoint(_directionPhrases[0]);
-                break;
-            case "SecondFloor":
-                AddFloorPoint(_directionPhrases[1]);
-                break;
-            case "ThirdFloor":
-                AddFloorPoint(_directionPhrases[2]);
-                break;
-            case "FourthFloor":
-                AddFloorPoint(_directionPhrases[3]);
-                break;
         }
     }
     //DirectionCheck(col,"","");
@@ -142,7 +132,6 @@ public class OnTriggerEntred : MonoBehaviour
     {
         _wayDetails.AddPointToWayDetails(_text);
     }
-
     private void AddFloorPoint(string _text)
     {
         _wayDetails.AddPointToWayDetails(_text);

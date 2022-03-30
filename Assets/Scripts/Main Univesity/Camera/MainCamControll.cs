@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
+using TMPro;
+
 
 public class MainCamControll : MonoBehaviour
 {
@@ -35,7 +36,6 @@ public class MainCamControll : MonoBehaviour
   [SerializeField] private float _rotationSpeed;
 
   [SerializeField] private GameObject _drawWay;
-
   //[SerializeField] private GameObject _list;
   public List<GameObject> _textList;
 
@@ -54,7 +54,17 @@ public class MainCamControll : MonoBehaviour
 
   [SerializeField] private float _increment;
   [SerializeField] private GameObject _markerMain;
+  [Space]
+  [SerializeField] private GameObject AI;
+  [SerializeField] private GameObject End;
+  [SerializeField] private WayDetailsController _wayDetailsController;
   
+  private float _zPosFirst;
+  private float _zPosSecond;
+
+  [SerializeField] private Transform _listOfDetails;
+  public string _endPointText { get; set; }
+
   private void Start()
   {
     cam = GetComponent<Camera>();
@@ -219,5 +229,39 @@ public class MainCamControll : MonoBehaviour
   {
     yield return 0.1f;
     _drawWay.SetActive(false);
+  }
+  public IEnumerator ObjectPossitionCheck()
+  {
+    while (true)
+    {
+      _zPosFirst = AI.transform.position.z;
+      if (Mathf.Round(AI.transform.localPosition.x) == Mathf.Round(End.transform.localPosition.x) && Mathf.Round(AI.transform.localPosition.y) == Mathf.Round(End.transform.localPosition.y))
+      {
+        _wayDetailsController.AddPointToWayDetails(_endPointText);
+        yield break;
+      }
+      yield return new WaitForSeconds(0.3f);
+      _zPosSecond = AI.transform.position.z;
+
+      if (_zPosFirst == _zPosSecond && !_listOfDetails.transform.GetChild(_listOfDetails.childCount - 1).GetComponentInChildren<TextMeshProUGUI>().text.ToLower().Contains("маршрут"))
+      {
+        switch (AI.transform.position.z)
+        {
+          case 14.5f:
+            _wayDetailsController.AddPointToWayDetails("Маршрут на первом этаже");
+            break;
+          case 9.5f:
+            _wayDetailsController.AddPointToWayDetails("Маршрут на втором этаже");
+            break;
+          case 4.3f:
+            _wayDetailsController.AddPointToWayDetails("Маршрут на третьем этаже");
+            break;
+          case -0.5f:
+            _wayDetailsController.AddPointToWayDetails("Маршрут на четвертом этаже");
+            break;
+              
+        }
+      }
+    }
   }
 }

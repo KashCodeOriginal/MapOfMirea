@@ -24,6 +24,7 @@ public class MainWayBuilder : MonoBehaviour
   private Button _fourthFloorButton;
   private GameObject _fourthFloor;
   private GameObject _wayDetails;
+  private Camera _camera;
 
   public string[] _firstFloorObject =
   {
@@ -79,6 +80,7 @@ public class MainWayBuilder : MonoBehaviour
     _thirdFloorButton = GameObject.FindWithTag("ThirdFloorButton").GetComponent<Button>();
     _fourthFloor = GameObject.FindWithTag("FourthFloor");
     _fourthFloorButton = GameObject.FindWithTag("FourthFloorButton").GetComponent<Button>();
+    _camera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
     
     _wayDetails = GameObject.FindWithTag("WayDetails");
   }
@@ -150,24 +152,6 @@ public class MainWayBuilder : MonoBehaviour
       TrailRendererDestroyer();
       
       _wayDetails.GetComponent<WayDetailsController>().AddPointToWayDetails(getItemText.text);
-      
-
-      if (_floor.name == "1")
-      {
-        _wayDetails.GetComponent<WayDetailsController>().AddPointToWayDetails("Маршрут на первом этаже");
-      }
-      if (_floor.name == "2")
-      {
-        _wayDetails.GetComponent<WayDetailsController>().AddPointToWayDetails("Маршрут на втором этаже");
-      }
-      if (_floor.name == "3")
-      {
-        _wayDetails.GetComponent<WayDetailsController>().AddPointToWayDetails("Маршрут на третьем этаже");
-      }
-      if (_floor.name == "4")
-      {
-        _wayDetails.GetComponent<WayDetailsController>().AddPointToWayDetails("Маршрут на четвертом этаже");
-      }
     }
 
     if (button.tag == "WayButtonsTo")
@@ -183,6 +167,8 @@ public class MainWayBuilder : MonoBehaviour
       _wayManager.GetComponent<WayManager>()._isToInPlace = true;
 
       _wayManager.GetComponent<WayManager>()._isToButtonActivated = true;
+
+      _camera.GetComponent<MainCamControll>()._endPointText = getItemText.text;
 
       TrailRendererDestroyer();
     }

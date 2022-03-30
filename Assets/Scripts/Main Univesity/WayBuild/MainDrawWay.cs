@@ -1,8 +1,6 @@
-using System;
 using UnityEngine;
 using Pathfinding;
 using TMPro;
-using UnityEngine.UI;
 using System.Collections;
 
 public class MainDrawWay : MonoBehaviour
@@ -37,6 +35,8 @@ public class MainDrawWay : MonoBehaviour
 
   public bool _isWayDrawn;
 
+  [SerializeField] private WayDetailsController _wayDetailsController;
+
   public void AllowToDrawWay()
   {
     if ((Start.transform.position.x == End.transform.position.x) && (Start.transform.position.y == End.transform.position.y ) && (Start.transform.position.z == End.transform.position.z))
@@ -58,7 +58,7 @@ public class MainDrawWay : MonoBehaviour
 
           _camera.GetComponent<Camera>().GetComponent<MainCamControll>().enabled = true;
           _cancel.GetComponent<ListCleaner>().OnClick();
-
+          
           _camera.GetComponent<MainCamControll>().targetPosx = Start.transform.position.x;
           _camera.GetComponent<MainCamControll>().targetPosy = Start.transform.position.y;
 
@@ -94,6 +94,8 @@ public class MainDrawWay : MonoBehaviour
           AI.GetComponent<AILerp>().enabled = false;
           AI.GetComponent<AILerp>().enabled = true;
 
+          _camera.GetComponent<MainCamControll>().StartCoroutine("ObjectPossitionCheck");
+
           _cancelWayButton.GetComponent<Animation>().Play("CancelWayButtonUp");
           _wayDetails.GetComponent<Animation>().Play("WayDetailsUp");
 
@@ -111,7 +113,7 @@ public class MainDrawWay : MonoBehaviour
 
           _mapMarker.transform.position = new Vector3(-10, -40, 0);
           _mapMarker.GetComponentInChildren<Animation>().Stop();
-
+          
           _drawWay.SetActive(false);
         }
       }

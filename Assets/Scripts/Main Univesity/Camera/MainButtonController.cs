@@ -25,6 +25,15 @@ public class MainButtonController : MonoBehaviour
 
   private int _buttonsAmmount = 0;
 
+  [SerializeField] private GameObject _firstButton;
+  [SerializeField] private GameObject _secondButton;
+  [SerializeField] private GameObject _thirdButton;
+  [SerializeField] private GameObject _fourthButton;
+  [SerializeField] private GameObject _fifthButton;
+  [SerializeField] private GameObject _sixthButton;
+
+  [SerializeField] private Image _referenceForButtons;
+
   public void OnValueChanged()
   {
     foreach (Transform child in List)
@@ -101,13 +110,13 @@ public class MainButtonController : MonoBehaviour
     if(_isFirstButtonActivated)
     {
       OnButtonsClean();
-      OnButtonDisabledColorChanging("Button 'À'");
+      OnButtonDisabledColorChanging(_firstButton);
     }
     else
     {
       OnButtonsClean();
       _isFirstButtonActivated = true;
-      OnButtonEnabledColorChanging("Button 'À'");
+      OnButtonEnabledColorChanging(_firstButton);
     }
   }
   public void OnSecondButtonClick()
@@ -115,13 +124,13 @@ public class MainButtonController : MonoBehaviour
     if (_isSecondButtonActivated)
     {
       OnButtonsClean();
-      OnButtonDisabledColorChanging("Button 'Á'");
+      OnButtonDisabledColorChanging(_secondButton);
     }
     else
     {
       OnButtonsClean();
       _isSecondButtonActivated = true;
-      OnButtonEnabledColorChanging("Button 'Á'");
+      OnButtonEnabledColorChanging(_secondButton);
     }
   }
   public void OnThirdButtonClick()
@@ -129,13 +138,13 @@ public class MainButtonController : MonoBehaviour
     if (_isThirdButtonActivated)
     {
       OnButtonsClean();
-      OnButtonDisabledColorChanging("Button 'Â'");
+      OnButtonDisabledColorChanging(_thirdButton);
     }
     else
     {
       OnButtonsClean();
       _isThirdButtonActivated = true;
-      OnButtonEnabledColorChanging("Button 'Â'");
+      OnButtonEnabledColorChanging(_thirdButton);
     }
   }
   public void OnFourthButtonClick()
@@ -143,13 +152,13 @@ public class MainButtonController : MonoBehaviour
     if (_isFourthButtonActivated)
     {
       OnButtonsClean();
-      OnButtonDisabledColorChanging("Button 'Ã'");
+      OnButtonDisabledColorChanging(_fourthButton);
     }
     else
     {
       OnButtonsClean();
       _isFourthButtonActivated = true;
-      OnButtonEnabledColorChanging("Button 'Ã'");
+      OnButtonEnabledColorChanging(_fourthButton);
     }
   }
   public void OnFifthButtonClick()
@@ -157,13 +166,13 @@ public class MainButtonController : MonoBehaviour
     if (_isFifthButtonActivated)
     {
       OnButtonsClean();
-      OnButtonDisabledColorChanging("Button 'Ä'");
+      OnButtonDisabledColorChanging(_fifthButton);
     }
     else
     {
       OnButtonsClean();
       _isFifthButtonActivated = true;
-      OnButtonEnabledColorChanging("Button 'Ä'");
+      OnButtonEnabledColorChanging(_fifthButton);
     }
   }
   public void OnSixthButtonClick()
@@ -171,16 +180,16 @@ public class MainButtonController : MonoBehaviour
     if (_isSixthButtonActivated)
     {
       OnButtonsClean();
-      OnButtonDisabledColorChanging("Button 'È'");
+      OnButtonDisabledColorChanging(_sixthButton);
     }
     else
     {
       OnButtonsClean();
       _isSixthButtonActivated = true;
-      OnButtonEnabledColorChanging("Button 'È'");
+      OnButtonEnabledColorChanging(_sixthButton);
     }
   }
-  private void OnButtonsClean()
+  public void OnButtonsClean()
   {
     _isFirstButtonActivated = false;
     _isSecondButtonActivated = false;
@@ -189,20 +198,20 @@ public class MainButtonController : MonoBehaviour
     _isFifthButtonActivated = false;
     _isSixthButtonActivated = false;
     
-    OnButtonDisabledColorChanging("Button 'À'");
-    OnButtonDisabledColorChanging("Button 'Á'");
-    OnButtonDisabledColorChanging("Button 'Â'");
-    OnButtonDisabledColorChanging("Button 'Ã'");
-    OnButtonDisabledColorChanging("Button 'Ä'");
-    OnButtonDisabledColorChanging("Button 'È'");
+    OnButtonDisabledColorChanging(_firstButton);
+    OnButtonDisabledColorChanging(_secondButton);
+    OnButtonDisabledColorChanging(_thirdButton);
+    OnButtonDisabledColorChanging(_fourthButton);
+    OnButtonDisabledColorChanging(_fifthButton);
+    OnButtonDisabledColorChanging(_sixthButton);
   }
 
-  private void OnButtonDisabledColorChanging(String _name)
+  private void OnButtonDisabledColorChanging(GameObject _name)
   {
-    GameObject.Find(_name).GetComponent<Image>().color = new Color(0.01568628f, 0.2941177f, 0.3019608f);
+    _name.GetComponent<Image>().color = _referenceForButtons.color;
   }
-  private void OnButtonEnabledColorChanging(String _name)
+  private void OnButtonEnabledColorChanging(GameObject _name)
   {
-    GameObject.Find(_name).GetComponent<Image>().color = new Color(0, 0.1376325f, 0.1415094f);
+    _name.GetComponent<Image>().color = new Color(_referenceForButtons.color.r - 0.1f, _referenceForButtons.color.g - 0.1f, _referenceForButtons.color.b - 0.1f);
   }
 }

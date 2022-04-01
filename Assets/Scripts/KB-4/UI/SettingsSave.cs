@@ -3,7 +3,6 @@ using System.IO;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using System.Collections;
 using Pathfinding;
 
 

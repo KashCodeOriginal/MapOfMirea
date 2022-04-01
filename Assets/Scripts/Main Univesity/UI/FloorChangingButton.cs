@@ -25,6 +25,8 @@ public class FloorChangingButton : MonoBehaviour
 
   [SerializeField] private GameObject _camera;
 
+  [SerializeField] private Image _buttonReference;
+
   public void OnFirstFloorClick()
   {
     if(_firstFloor.GetComponent<SpriteRenderer>().color.a == 0)
@@ -33,7 +35,7 @@ public class FloorChangingButton : MonoBehaviour
       _firstFloor.GetComponent<Animation>().Play("FirstFloor");
       _firstFloorCanvas.SetActive(true);
 
-      _firstFloorButton.color = new Color(0.02990385f, 0.3554469f, 0.3773585f);
+      _firstFloorButton.color = new Color(_buttonReference.color.r - 0.15f, _buttonReference.color.g - 0.15f, _buttonReference.color.b - 0.15f);
 
       _camera.transform.position = new Vector3(_camera.transform.position.x, _camera.transform.position.y, 11);
     }
@@ -46,7 +48,7 @@ public class FloorChangingButton : MonoBehaviour
       _secondFloor.GetComponent<Animation>().Play("SecondFloor");
       _secondFloorCanvas.SetActive(true);
       
-     _secondFloorButton.color = new Color(0.02990385f, 0.3554469f, 0.3773585f);
+     _secondFloorButton.color = new Color(_buttonReference.color.r - 0.15f, _buttonReference.color.g - 0.15f, _buttonReference.color.b - 0.15f);
 
       _camera.transform.position = new Vector3(_camera.transform.position.x, _camera.transform.position.y, 5);
     }
@@ -59,7 +61,7 @@ public class FloorChangingButton : MonoBehaviour
       _thirdFloor.GetComponent<Animation>().Play("ThirdFloor");
       _thirdFloorCanvas.SetActive(true);
       
-      _thirdFloorButton.color = new Color(0.02990385f, 0.3554469f, 0.3773585f);
+      _thirdFloorButton.color = new Color(_buttonReference.color.r - 0.15f, _buttonReference.color.g - 0.15f, _buttonReference.color.b - 0.15f);
 
       _camera.transform.position = new Vector3(_camera.transform.position.x, _camera.transform.position.y, 1);
     }
@@ -73,7 +75,7 @@ public class FloorChangingButton : MonoBehaviour
       _fourthFloor.GetComponent<Animation>().Play("FourthFloor");
       _fourthFloorCanvas.SetActive(true);
       
-      _fourthFloorButton.color = new Color(0.02990385f, 0.3554469f, 0.3773585f);
+      _fourthFloorButton.color = new Color(_buttonReference.color.r - 0.15f, _buttonReference.color.g - 0.15f, _buttonReference.color.b - 0.15f);
 
       _camera.transform.position = new Vector3(_camera.transform.position.x, _camera.transform.position.y, -2);
     }
@@ -94,7 +96,7 @@ public class FloorChangingButton : MonoBehaviour
     _thirdFloorCanvas.SetActive(false);
     _fourthFloorCanvas.SetActive(false);
     
-    _firstFloorButton.color = new Color(0.05490196f, 0.4627451f, 0.4901961f);
+    _firstFloorButton.color = new Color(_buttonReference.color.r, _buttonReference.color.g, _buttonReference.color.b);
     _secondFloorButton.color = _firstFloorButton.GetComponent<Image>().color;
     _thirdFloorButton.color = _firstFloorButton.GetComponent<Image>().color;
     _fourthFloorButton.color = _firstFloorButton.GetComponent<Image>().color;

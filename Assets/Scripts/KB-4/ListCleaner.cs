@@ -9,7 +9,7 @@ public class ListCleaner : MonoBehaviour
   [SerializeField] GameObject _findSomething;
   public void OnClick()
   {
-    if(_findSomething.activeSelf == true)
+    if(_findSomething.activeSelf)
     {
       _textInput.GetComponent<TMP_InputField>().text = "";
       _textInput.GetComponent<CustomInputField>().UpdateState();

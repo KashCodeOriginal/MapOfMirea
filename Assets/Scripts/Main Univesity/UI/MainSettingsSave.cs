@@ -70,9 +70,19 @@ public class MainSettingsSave : MonoBehaviour
     _userData.Text[1] = _gameObjects[9].GetComponent<TextMeshProUGUI>().color.g;
     _userData.Text[2] = _gameObjects[9].GetComponent<TextMeshProUGUI>().color.b;
     
-    /*
-    _userData.WaySpeed = Convert.ToInt16(_gameObjects[6].GetComponent<AILerp>().speed);
-    */
+    _userData.Menu[0] = _gameObjects[10].GetComponent<Image>().color.r;
+    _userData.Menu[1] = _gameObjects[10].GetComponent<Image>().color.g;
+    _userData.Menu[2] = _gameObjects[10].GetComponent<Image>().color.b;
+    
+    _userData.Icons[0] = _gameObjects[11].GetComponent<Image>().color.r;
+    _userData.Icons[1] = _gameObjects[11].GetComponent<Image>().color.g;
+    _userData.Icons[2] = _gameObjects[11].GetComponent<Image>().color.b;
+    
+    _userData.Way[0] = _gameObjects[12].GetComponent<SpriteRenderer>().color.r;
+    _userData.Way[1] = _gameObjects[12].GetComponent<SpriteRenderer>().color.g;
+    _userData.Way[2] = _gameObjects[12].GetComponent<SpriteRenderer>().color.b;
+
+    _userData.WaySpeed = Convert.ToInt16(_gameObjects[13].GetComponent<AILerp>().speed);
 
     string jsonString = JsonUtility.ToJson(_userData);
     File.WriteAllText(_path, jsonString);
@@ -98,6 +108,14 @@ public class MainSettingsSave : MonoBehaviour
       _gameObjectForLoad[1].GetComponent<MainCamColorChanging>().OnBackGroundLoad(_data.BackGround[0],_data.BackGround[1],_data.BackGround[2]);
       
       _gameObjectForLoad[2].GetComponent<MainTextColorControll>().OnTextLoad(_data.Text[0],_data.Text[1],_data.Text[2]);
+      
+      _gameObjectForLoad[3].GetComponent<MenuColorChanging>().OnMenuLoad(_data.Menu[0],_data.Menu[1],_data.Menu[2]);
+      
+      _gameObjectForLoad[4].GetComponent<IconsColorChanger>().OnIconSettingsLoad(_data.Icons[0],_data.Icons[1],_data.Icons[2]);
+      
+      _gameObjectForLoad[5].GetComponent<WayColorSetiings>().OnWayLoad(_data.Way[0],_data.Way[1],_data.Way[2]);
+      
+      _gameObjectForLoad[6].GetComponent<WayBuilderSpeed>().WayBuilderSpeedLoad(_data.WaySpeed);
     }
   }
 #if UNITY_ANDROID && !UNITY_EDITOR

@@ -46,7 +46,6 @@ public class MainTextColorControll : MonoBehaviour
         }
         foreach (var text in _camera._textList)
         {
-            while(_camera._textList.Count < 650)
             try
             {
                 text.GetComponentInChildren<TextMeshProUGUI>().color = new Color(r, g, b);

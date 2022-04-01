@@ -21,6 +21,7 @@ public class MenuColorChanging : MonoBehaviour
   public void OnMenuLoad(float r, float g, float b)
   {
     _buttonPrefab.GetComponent<Image>().color = new Color(r, g, b);
+    _detailsButtonPrefab.GetComponent<Image>().color = new Color(r, g, b);  
     
     for (int i = 0; i < _images.Length; i++)
     {

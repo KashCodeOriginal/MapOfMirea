@@ -601,13 +601,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 0}
-  _secondFloor: {fileID: 0}
-  _thirdFloor: {fileID: 0}
-  _fourthFloor: {fileID: 0}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -764,13 +757,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 0}
-  _secondFloor: {fileID: 0}
-  _thirdFloor: {fileID: 0}
-  _fourthFloor: {fileID: 0}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -833,13 +819,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 0}
-  _secondFloor: {fileID: 0}
-  _thirdFloor: {fileID: 0}
-  _fourthFloor: {fileID: 0}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -2540,13 +2519,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 1799599498}
-  _secondFloor: {fileID: 1799599498}
-  _thirdFloor: {fileID: 1799599498}
-  _fourthFloor: {fileID: 1799599498}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -4800,13 +4772,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 0}
-  _secondFloor: {fileID: 0}
-  _thirdFloor: {fileID: 0}
-  _fourthFloor: {fileID: 0}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -5588,13 +5553,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 1799599498}
-  _secondFloor: {fileID: 1799599498}
-  _thirdFloor: {fileID: 1799599498}
-  _fourthFloor: {fileID: 1799599498}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -5791,13 +5749,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 0}
-  _secondFloor: {fileID: 0}
-  _thirdFloor: {fileID: 0}
-  _fourthFloor: {fileID: 0}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -7032,13 +6983,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 0}
-  _secondFloor: {fileID: 0}
-  _thirdFloor: {fileID: 0}
-  _fourthFloor: {fileID: 0}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -7643,13 +7587,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 1799599498}
-  _secondFloor: {fileID: 1799599498}
-  _thirdFloor: {fileID: 1799599498}
-  _fourthFloor: {fileID: 1799599498}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -7932,13 +7869,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 0}
-  _secondFloor: {fileID: 0}
-  _thirdFloor: {fileID: 0}
-  _fourthFloor: {fileID: 0}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -8699,13 +8629,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 1799599498}
-  _secondFloor: {fileID: 1799599498}
-  _thirdFloor: {fileID: 1799599498}
-  _fourthFloor: {fileID: 1799599498}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -8950,13 +8873,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 0}
-  _secondFloor: {fileID: 0}
-  _thirdFloor: {fileID: 0}
-  _fourthFloor: {fileID: 0}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -9661,13 +9577,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 1799599498}
-  _secondFloor: {fileID: 1799599498}
-  _thirdFloor: {fileID: 1799599498}
-  _fourthFloor: {fileID: 1799599498}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -11901,13 +11810,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 0}
-  _secondFloor: {fileID: 0}
-  _thirdFloor: {fileID: 0}
-  _fourthFloor: {fileID: 0}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -12198,13 +12100,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 0}
-  _secondFloor: {fileID: 0}
-  _thirdFloor: {fileID: 0}
-  _fourthFloor: {fileID: 0}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -12670,13 +12565,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 0}
-  _secondFloor: {fileID: 0}
-  _thirdFloor: {fileID: 0}
-  _fourthFloor: {fileID: 0}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -13449,13 +13337,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 1799599498}
-  _secondFloor: {fileID: 1799599498}
-  _thirdFloor: {fileID: 1799599498}
-  _fourthFloor: {fileID: 1799599498}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -14362,13 +14243,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 0}
-  _secondFloor: {fileID: 0}
-  _thirdFloor: {fileID: 0}
-  _fourthFloor: {fileID: 0}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -14525,13 +14399,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 1799599498}
-  _secondFloor: {fileID: 1799599498}
-  _thirdFloor: {fileID: 1799599498}
-  _fourthFloor: {fileID: 1799599498}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -17879,13 +17746,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 0}
-  _secondFloor: {fileID: 0}
-  _thirdFloor: {fileID: 0}
-  _fourthFloor: {fileID: 0}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -19097,13 +18957,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 0}
-  _secondFloor: {fileID: 0}
-  _thirdFloor: {fileID: 0}
-  _fourthFloor: {fileID: 0}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -19260,13 +19113,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 0}
-  _secondFloor: {fileID: 0}
-  _thirdFloor: {fileID: 0}
-  _fourthFloor: {fileID: 0}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -20122,13 +19968,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 0}
-  _secondFloor: {fileID: 0}
-  _thirdFloor: {fileID: 0}
-  _fourthFloor: {fileID: 0}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -21407,13 +21246,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 1799599498}
-  _secondFloor: {fileID: 1799599498}
-  _thirdFloor: {fileID: 1799599498}
-  _fourthFloor: {fileID: 1799599498}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -22268,13 +22100,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 0}
-  _secondFloor: {fileID: 0}
-  _thirdFloor: {fileID: 0}
-  _fourthFloor: {fileID: 0}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -22961,13 +22786,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 1799599498}
-  _secondFloor: {fileID: 1799599498}
-  _thirdFloor: {fileID: 1799599498}
-  _fourthFloor: {fileID: 1799599498}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -24357,13 +24175,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 0}
-  _secondFloor: {fileID: 0}
-  _thirdFloor: {fileID: 0}
-  _fourthFloor: {fileID: 0}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -24833,13 +24644,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 1799599498}
-  _secondFloor: {fileID: 1799599498}
-  _thirdFloor: {fileID: 1799599498}
-  _fourthFloor: {fileID: 1799599498}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -27655,13 +27459,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 0}
-  _secondFloor: {fileID: 0}
-  _thirdFloor: {fileID: 0}
-  _fourthFloor: {fileID: 0}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -28950,13 +28747,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 1799599498}
-  _secondFloor: {fileID: 1799599498}
-  _thirdFloor: {fileID: 1799599498}
-  _fourthFloor: {fileID: 1799599498}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -29752,13 +29542,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 1799599498}
-  _secondFloor: {fileID: 1799599498}
-  _thirdFloor: {fileID: 1799599498}
-  _fourthFloor: {fileID: 1799599498}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -30049,13 +29832,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 0}
-  _secondFloor: {fileID: 0}
-  _thirdFloor: {fileID: 0}
-  _fourthFloor: {fileID: 0}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -30299,13 +30075,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 0}
-  _secondFloor: {fileID: 0}
-  _thirdFloor: {fileID: 0}
-  _fourthFloor: {fileID: 0}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -30502,13 +30271,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 0}
-  _secondFloor: {fileID: 0}
-  _thirdFloor: {fileID: 0}
-  _fourthFloor: {fileID: 0}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -31942,13 +31704,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 0}
-  _secondFloor: {fileID: 0}
-  _thirdFloor: {fileID: 0}
-  _fourthFloor: {fileID: 0}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -32105,13 +31860,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 0}
-  _secondFloor: {fileID: 0}
-  _thirdFloor: {fileID: 0}
-  _fourthFloor: {fileID: 0}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -32501,13 +32249,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 0}
-  _secondFloor: {fileID: 0}
-  _thirdFloor: {fileID: 0}
-  _fourthFloor: {fileID: 0}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -32664,13 +32405,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 0}
-  _secondFloor: {fileID: 0}
-  _thirdFloor: {fileID: 0}
-  _fourthFloor: {fileID: 0}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -33005,13 +32739,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 0}
-  _secondFloor: {fileID: 0}
-  _thirdFloor: {fileID: 0}
-  _fourthFloor: {fileID: 0}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -34172,13 +33899,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 0}
-  _secondFloor: {fileID: 0}
-  _thirdFloor: {fileID: 0}
-  _fourthFloor: {fileID: 0}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -35657,13 +35377,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 0}
-  _secondFloor: {fileID: 0}
-  _thirdFloor: {fileID: 0}
-  _fourthFloor: {fileID: 0}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -35954,13 +35667,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 1799599498}
-  _secondFloor: {fileID: 1799599498}
-  _thirdFloor: {fileID: 1799599498}
-  _fourthFloor: {fileID: 1799599498}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -36267,13 +35973,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 1799599498}
-  _secondFloor: {fileID: 1799599498}
-  _thirdFloor: {fileID: 1799599498}
-  _fourthFloor: {fileID: 1799599498}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -36806,13 +36505,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 1799599498}
-  _secondFloor: {fileID: 1799599498}
-  _thirdFloor: {fileID: 1799599498}
-  _fourthFloor: {fileID: 1799599498}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -37828,13 +37520,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 0}
-  _secondFloor: {fileID: 0}
-  _thirdFloor: {fileID: 0}
-  _fourthFloor: {fileID: 0}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -39108,13 +38793,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 0}
-  _secondFloor: {fileID: 0}
-  _thirdFloor: {fileID: 0}
-  _fourthFloor: {fileID: 0}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -39366,13 +39044,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 0}
-  _secondFloor: {fileID: 0}
-  _thirdFloor: {fileID: 0}
-  _fourthFloor: {fileID: 0}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -41011,13 +40682,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 0}
-  _secondFloor: {fileID: 0}
-  _thirdFloor: {fileID: 0}
-  _fourthFloor: {fileID: 0}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -42015,13 +41679,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 0}
-  _secondFloor: {fileID: 0}
-  _thirdFloor: {fileID: 0}
-  _fourthFloor: {fileID: 0}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -43732,13 +43389,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 0}
-  _secondFloor: {fileID: 0}
-  _thirdFloor: {fileID: 0}
-  _fourthFloor: {fileID: 0}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -43935,13 +43585,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 0}
-  _secondFloor: {fileID: 0}
-  _thirdFloor: {fileID: 0}
-  _fourthFloor: {fileID: 0}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -44232,13 +43875,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 1799599498}
-  _secondFloor: {fileID: 1799599498}
-  _thirdFloor: {fileID: 1799599498}
-  _fourthFloor: {fileID: 1799599498}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -44395,13 +44031,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 1799599498}
-  _secondFloor: {fileID: 1799599498}
-  _thirdFloor: {fileID: 1799599498}
-  _fourthFloor: {fileID: 1799599498}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -45355,13 +44984,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 0}
-  _secondFloor: {fileID: 0}
-  _thirdFloor: {fileID: 0}
-  _fourthFloor: {fileID: 0}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -46600,13 +46222,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 0}
-  _secondFloor: {fileID: 0}
-  _thirdFloor: {fileID: 0}
-  _fourthFloor: {fileID: 0}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -47175,13 +46790,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 0}
-  _secondFloor: {fileID: 0}
-  _thirdFloor: {fileID: 0}
-  _fourthFloor: {fileID: 0}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -47560,13 +47168,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 0}
-  _secondFloor: {fileID: 0}
-  _thirdFloor: {fileID: 0}
-  _fourthFloor: {fileID: 0}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -50223,13 +49824,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 0}
-  _secondFloor: {fileID: 0}
-  _thirdFloor: {fileID: 0}
-  _fourthFloor: {fileID: 0}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -51104,13 +50698,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 1799599498}
-  _secondFloor: {fileID: 1799599498}
-  _thirdFloor: {fileID: 1799599498}
-  _fourthFloor: {fileID: 1799599498}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -51538,13 +51125,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 1799599498}
-  _secondFloor: {fileID: 1799599498}
-  _thirdFloor: {fileID: 1799599498}
-  _fourthFloor: {fileID: 1799599498}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -53147,13 +52727,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 0}
-  _secondFloor: {fileID: 0}
-  _thirdFloor: {fileID: 0}
-  _fourthFloor: {fileID: 0}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -53546,13 +53119,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 1799599498}
-  _secondFloor: {fileID: 1799599498}
-  _thirdFloor: {fileID: 1799599498}
-  _fourthFloor: {fileID: 1799599498}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -53709,13 +53275,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 0}
-  _secondFloor: {fileID: 0}
-  _thirdFloor: {fileID: 0}
-  _fourthFloor: {fileID: 0}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -54951,13 +54510,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 1799599498}
-  _secondFloor: {fileID: 1799599498}
-  _thirdFloor: {fileID: 1799599498}
-  _fourthFloor: {fileID: 1799599498}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -55114,13 +54666,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 1799599498}
-  _secondFloor: {fileID: 1799599498}
-  _thirdFloor: {fileID: 1799599498}
-  _fourthFloor: {fileID: 1799599498}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -55607,13 +55152,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 690861307}
-  _firstFloor: {fileID: 0}
-  _secondFloor: {fileID: 0}
-  _thirdFloor: {fileID: 0}
-  _fourthFloor: {fileID: 0}
-  _secondFloorBG: {fileID: 0}
-  _thirdFloorBG: {fileID: 0}
-  _fourthFloorBG: {fileID: 0}
   _cam: {fileID: 519420031}
   _backGround: {fileID: 1796219469}
   _modelForSettings: {fileID: 1304046110}
@@ -56561,7 +56099,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 7.9714, y: -651.3}
-  m_SizeDelta: {x: 400, y: 110}
+  m_SizeDelta: {x: 350.77, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!111 &2144984621
 Animation:

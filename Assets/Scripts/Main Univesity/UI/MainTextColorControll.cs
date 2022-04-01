@@ -11,7 +11,6 @@ public class MainTextColorControll : MonoBehaviour
     [SerializeField] private List<GameObject> _modelTextWaytList;
 
     [SerializeField] private MainCamControll _camera;
-
     public void OnTextClick()
     {
         foreach (var text in _camera._textList)
@@ -37,8 +36,17 @@ public class MainTextColorControll : MonoBehaviour
     }
     public void OnTextLoad(float r, float g, float b)
     {
+        foreach (var modelText in _modelTextList)
+        {
+            modelText.GetComponent<TextMeshProUGUI>().color = new Color(r, g, b);
+        }
+        foreach (var modelWayText in _modelTextList)
+        {
+            modelWayText.GetComponent<TextMeshProUGUI>().color = new Color(r, g, b);
+        }
         foreach (var text in _camera._textList)
         {
+            while(_camera._textList.Count < 650)
             try
             {
                 text.GetComponentInChildren<TextMeshProUGUI>().color = new Color(r, g, b);
@@ -48,14 +56,6 @@ public class MainTextColorControll : MonoBehaviour
                 text.GetComponentInChildren<SpriteRenderer>().color = new Color(r, g, b);
             }
 
-        }
-        foreach (var modelText in _modelTextList)
-        {
-            modelText.GetComponent<TextMeshProUGUI>().color = new Color(r, g, b);
-        }
-        foreach (var modelWayText in _modelTextList)
-        {
-            modelWayText.GetComponent<TextMeshProUGUI>().color = new Color(r, g, b);
         }
     }
 }

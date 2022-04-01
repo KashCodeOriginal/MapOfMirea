@@ -259,7 +259,6 @@ public class MainCamControll : MonoBehaviour
           case -0.5f:
             _wayDetailsController.AddPointToWayDetails("Маршрут на четвертом этаже");
             break;
-              
         }
       }
     }

@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 
 public class ZoomButtons : MonoBehaviour
@@ -7,10 +8,10 @@ public class ZoomButtons : MonoBehaviour
     private bool _isMinusDown = false;
 
     [SerializeField] private Camera _cam;
-
-    [SerializeField] private float _time;
-
     [SerializeField] private float _zoomStep;
+    
+    private float ZoomMin = 5.5f;
+    private float ZoomMax = 65f;
     
     public void OnZoomButtonPlusDown()
     {
@@ -23,14 +24,33 @@ public class ZoomButtons : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (_isPlusDown && _cam.orthographicSize > 10)
+        if (_isPlusDown)
         {
-            _cam.orthographicSize = Mathf.Lerp(_cam.orthographicSize, _cam.orthographicSize - _zoomStep, _time);
+            if (_cam.orthographicSize <= ZoomMin + _zoomStep)
+            {
+                float _maxZoom = _cam.orthographicSize - ZoomMin;
+
+                _cam.orthographicSize -= _maxZoom;
+            }
+            else if (_cam.orthographicSize != ZoomMin)
+            {
+                _cam.orthographicSize -= _zoomStep;
+            }
+
             _isPlusDown = false;
         }
-        if (_isMinusDown && _cam.orthographicSize <= 60)
+        if (_isMinusDown)
         {
-            _cam.orthographicSize = Mathf.Lerp(_cam.orthographicSize, _cam.orthographicSize + _zoomStep, _time);
+            if (_cam.orthographicSize >= ZoomMax - _zoomStep)
+            {
+                float _maxZoom = ZoomMax - _cam.orthographicSize;
+
+                _cam.orthographicSize += _maxZoom;
+            }
+            else if (_cam.orthographicSize != ZoomMax)
+            {
+                _cam.orthographicSize += _zoomStep;
+            }
             _isMinusDown = false;
         }
     }

@@ -76,6 +76,8 @@ public class MainFromToButtonsControl : MonoBehaviour
             _whereToPanel.GetComponent<Animation>().Play("WhereToDown");
         }
         
+        _wayDetails.GetComponent<ListOfDetailsCleaner>().CleanAllButtons();
+        
         _wayDetailsController.AddPointToWayDetails(_textFrom.text);
     }
 

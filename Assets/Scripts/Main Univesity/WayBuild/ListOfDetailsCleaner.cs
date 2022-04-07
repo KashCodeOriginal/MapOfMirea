@@ -8,7 +8,7 @@ public class ListOfDetailsCleaner : MonoBehaviour
     {
         foreach (Transform child in _list)
         {
-            GameObject.Destroy(child.gameObject);
+            Destroy(child.gameObject);
         }
     }
 }

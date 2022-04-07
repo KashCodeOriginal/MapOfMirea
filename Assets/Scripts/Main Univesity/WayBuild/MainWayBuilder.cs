@@ -151,6 +151,7 @@ public class MainWayBuilder : MonoBehaviour
 
       TrailRendererDestroyer();
       
+      _wayDetails.GetComponent<ListOfDetailsCleaner>().CleanAllButtons();
       _wayDetails.GetComponent<WayDetailsController>().AddPointToWayDetails(getItemText.text);
     }
 

@@ -34,9 +34,6 @@ public class MainDrawWay : MonoBehaviour
   TrailRenderer NewTrails;
 
   public bool _isWayDrawn;
-
-  [SerializeField] private WayDetailsController _wayDetailsController;
-
   public void AllowToDrawWay()
   {
     if ((Start.transform.position.x == End.transform.position.x) && (Start.transform.position.y == End.transform.position.y ) && (Start.transform.position.z == End.transform.position.z))

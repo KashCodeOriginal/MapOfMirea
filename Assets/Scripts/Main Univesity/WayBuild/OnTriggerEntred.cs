@@ -55,7 +55,7 @@ public class OnTriggerEntred : MonoBehaviour
                 DirectionCheck(col,$"{_directionPhrases[7]} в корпусе Д",$"{_directionPhrases[6]} в корпусе Д");
                 break;
             case "15":
-                DirectionCheck(col,$"{_directionPhrases[7]} на третий этаж корпуса И",$"{_directionPhrases[6]} к И200");
+                DirectionCheck(col,$"{_directionPhrases[7]} корпуса И",$"{_directionPhrases[6]} к И200");
                 break;
             case "16":
                 DirectionCheck(col,$"{_directionPhrases[7]} у А7",$"{_directionPhrases[6]} у А323");
@@ -129,10 +129,6 @@ public class OnTriggerEntred : MonoBehaviour
         _wayDetails.AddPointToWayDetails(_text);
     }
     private void OnDirectionSecond(string _text)
-    {
-        _wayDetails.AddPointToWayDetails(_text);
-    }
-    private void AddFloorPoint(string _text)
     {
         _wayDetails.AddPointToWayDetails(_text);
     }

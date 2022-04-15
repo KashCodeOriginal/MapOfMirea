@@ -2,6 +2,7 @@ using UnityEngine;
 using Pathfinding;
 using TMPro;
 using System.Collections;
+using UnityEngine.UI;
 
 public class MainDrawWay : MonoBehaviour
 {
@@ -32,6 +33,8 @@ public class MainDrawWay : MonoBehaviour
   [SerializeField] private GameObject _floorChangingButton;
 
   TrailRenderer NewTrails;
+
+  [SerializeField] private Button _wayDetailsButton;
 
   public bool _isWayDrawn;
   public void AllowToDrawWay()
@@ -112,6 +115,8 @@ public class MainDrawWay : MonoBehaviour
           _mapMarker.GetComponentInChildren<Animation>().Stop();
           
           _drawWay.SetActive(false);
+
+          _wayDetailsButton.onClick.Invoke();
         }
       }
       else

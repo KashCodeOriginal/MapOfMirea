@@ -14,8 +14,7 @@ public class RoomsSorting : MonoBehaviour
         SecurityControlRoom,
         Library,
         InOutPlace,
-        EntryControlRoom,
-        
+        EntryControlRoom
     }
 
     public RoomsTypes RoomType;

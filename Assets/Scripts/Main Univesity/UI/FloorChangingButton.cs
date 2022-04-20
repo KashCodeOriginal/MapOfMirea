@@ -35,7 +35,7 @@ public class FloorChangingButton : MonoBehaviour
       _firstFloor.GetComponent<Animation>().Play("FirstFloor");
       _firstFloorCanvas.SetActive(true);
 
-      _firstFloorButton.color = new Color(_buttonReference.color.r - 0.15f, _buttonReference.color.g - 0.15f, _buttonReference.color.b - 0.15f);
+      _firstFloorButton.color = new Color(0.654902f, 0.6235294f, 1);
 
       _camera.transform.position = new Vector3(_camera.transform.position.x, _camera.transform.position.y, 11);
     }
@@ -48,7 +48,7 @@ public class FloorChangingButton : MonoBehaviour
       _secondFloor.GetComponent<Animation>().Play("SecondFloor");
       _secondFloorCanvas.SetActive(true);
       
-     _secondFloorButton.color = new Color(_buttonReference.color.r - 0.15f, _buttonReference.color.g - 0.15f, _buttonReference.color.b - 0.15f);
+     _secondFloorButton.color = new Color(0.654902f, 0.6235294f, 1);
 
       _camera.transform.position = new Vector3(_camera.transform.position.x, _camera.transform.position.y, 5);
     }
@@ -61,7 +61,7 @@ public class FloorChangingButton : MonoBehaviour
       _thirdFloor.GetComponent<Animation>().Play("ThirdFloor");
       _thirdFloorCanvas.SetActive(true);
       
-      _thirdFloorButton.color = new Color(_buttonReference.color.r - 0.15f, _buttonReference.color.g - 0.15f, _buttonReference.color.b - 0.15f);
+      _thirdFloorButton.color = new Color(0.654902f, 0.6235294f, 1);
 
       _camera.transform.position = new Vector3(_camera.transform.position.x, _camera.transform.position.y, 1);
     }
@@ -75,7 +75,7 @@ public class FloorChangingButton : MonoBehaviour
       _fourthFloor.GetComponent<Animation>().Play("FourthFloor");
       _fourthFloorCanvas.SetActive(true);
       
-      _fourthFloorButton.color = new Color(_buttonReference.color.r - 0.15f, _buttonReference.color.g - 0.15f, _buttonReference.color.b - 0.15f);
+      _fourthFloorButton.color = new Color(0.654902f, 0.6235294f, 1);
 
       _camera.transform.position = new Vector3(_camera.transform.position.x, _camera.transform.position.y, -2);
     }

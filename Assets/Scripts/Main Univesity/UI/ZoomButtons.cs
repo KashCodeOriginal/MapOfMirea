@@ -36,7 +36,7 @@ public class ZoomButtons : MonoBehaviour
 
                 _cam.orthographicSize -= _maxZoom;
 
-                _plusButton.GetComponent<Image>().color = new Color(_referenceForButtons.color.r - 0.15f, _referenceForButtons.color.g - 0.15f, _referenceForButtons.color.b - 0.15f);
+                _plusButton.GetComponent<Image>().color = new Color(0.654902f, 0.6235294f, 1);
                 _plusButton.enabled = false;
             }
             else if (_cam.orthographicSize != ZoomMin)
@@ -58,7 +58,7 @@ public class ZoomButtons : MonoBehaviour
 
                 _cam.orthographicSize += _maxZoom;
                 
-                _minusButton.GetComponent<Image>().color = new Color(_referenceForButtons.color.r - 0.15f, _referenceForButtons.color.g - 0.15f, _referenceForButtons.color.b - 0.15f);
+                _minusButton.GetComponent<Image>().color = new Color(0.654902f, 0.6235294f, 1);
                 _minusButton.enabled = false;
             }
             else if (_cam.orthographicSize != ZoomMax)

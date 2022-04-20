@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.EventSystems;
 
 
 public class MainCamControll : MonoBehaviour
@@ -23,7 +25,7 @@ public class MainCamControll : MonoBehaviour
   [SerializeField] private float XMin = -28.7f;
   [SerializeField] private float XMax = 28.7f;
   [SerializeField] private float YMin = -1.5f;
-  [SerializeField] private float YMax = 6;
+  [SerializeField] private float YMax = 10;
 
   [SerializeField] private float _minTrailWight = 0.15f;
   [SerializeField] private float _maxTrailWight = 0.3f;
@@ -58,11 +60,14 @@ public class MainCamControll : MonoBehaviour
   [SerializeField] private GameObject AI;
   [SerializeField] private GameObject End;
   [SerializeField] private WayDetailsController _wayDetailsController;
-  
+
   private float _zPosFirst;
   private float _zPosSecond;
 
   [SerializeField] private Transform _listOfDetails;
+
+  [SerializeField] private GameObject _uiCollisionCheck;
+  [SerializeField] private bool _isCameraCanMove = true;
   public string _endPointText { get; set; }
 
   private void Start()
@@ -87,7 +92,6 @@ public class MainCamControll : MonoBehaviour
     {
       _startPos = cam.ScreenToWorldPoint(Input.mousePosition);
       
-      /*
       PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
       eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
       List<RaycastResult> results = new List<RaycastResult>();
@@ -96,10 +100,16 @@ public class MainCamControll : MonoBehaviour
       {
         if (go.gameObject.name == "WayDetailsBackGround")
         {
-          Debug.Log("Работает)))");
+          _isCameraCanMove = false;
+          _uiCollisionCheck.SetActive(true);
+        }
+        else if (go.gameObject.name == "UICollisionCheck")
+        {
+          _isCameraCanMove = true;
+          _uiCollisionCheck.SetActive(false);
         }
       }
-      */
+      
       /*
       float _timeSinceFirstClick = Time.time - _lastClickTime;
 
@@ -119,7 +129,7 @@ public class MainCamControll : MonoBehaviour
       */
       _lastClickTime = Time.time;
     }
-    else if (Input.GetMouseButton(0) )
+    else if (Input.GetMouseButton(0) && _isCameraCanMove)
     {
       float posx = cam.ScreenToWorldPoint(Input.mousePosition).x - _startPos.x;
       float posy = cam.ScreenToWorldPoint(Input.mousePosition).y - _startPos.y;
@@ -166,22 +176,18 @@ public class MainCamControll : MonoBehaviour
 
       if (_rotationAngle >= -30 && _rotationAngle <= 30)
       {
-        OnHorizontalRotation();
         cam.transform.localRotation = Quaternion.Euler(0, 0, Mathf.LerpAngle(_rotationAngle, 0, _rotationSpeed));
       }
       else if (_rotationAngle >= 60 && _rotationAngle <= 120)
       {
-        //OnVerticanRotation();
         cam.transform.localRotation = Quaternion.Euler(0, 0, Mathf.LerpAngle(_rotationAngle, 90, _rotationSpeed));
       }
       else if ((_rotationAngle >= 150 && _rotationAngle >= -150) || (_rotationAngle <= 150 && _rotationAngle <= -150))
       {
-        OnHorizontalRotation();
         cam.transform.localRotation = Quaternion.Euler(0, 0, Mathf.LerpAngle(_rotationAngle, 180, _rotationSpeed));
       }
       else if (_rotationAngle >= -120 && _rotationAngle <= -60)
       {
-        //OnVerticanRotation();
         cam.transform.localRotation = Quaternion.Euler(0, 0, Mathf.LerpAngle(_rotationAngle, 270, _rotationSpeed));
       }
       foreach (var child in _textList)
@@ -202,21 +208,6 @@ public class MainCamControll : MonoBehaviour
 
     _markerMain.transform.localScale = new Vector3(Mathf.Clamp(_markerMain.transform.localScale.x + (markerIncrement / _increment), _markerMinValue, _markerMaxValue),Mathf.Clamp(_markerMain.transform.localScale.y + (markerIncrement / _increment), _markerMinValue, _markerMaxValue),1);
   }
-  private void OnVerticanRotation()
-  {
-    XMin = -100;
-    XMax = -100;
-    YMin = -20;
-    YMax = 20;
-  }
-  private void OnHorizontalRotation()
-  {
-    XMin = -28.7f;
-    XMax = 28.7f;
-    YMin = -3.35f;
-    YMax = 6;
-  }
-
   private void GetAllChilds(GameObject child)
   {
     for (int i = 0; i < child.transform.childCount; i++)

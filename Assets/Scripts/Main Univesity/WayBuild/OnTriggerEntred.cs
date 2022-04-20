@@ -110,8 +110,6 @@ public class OnTriggerEntred : MonoBehaviour
                 break;
         }
     }
-    //DirectionCheck(col,"","");
-
     private void DirectionCheck(Collider _col,string _firstDirection, string _secondDirection)
     {   
         if (_col.GetComponent<TriggerDirection>()._direction == TriggerDirection.WayDirection.Up)

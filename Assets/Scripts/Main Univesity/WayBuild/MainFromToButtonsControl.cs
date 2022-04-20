@@ -50,13 +50,12 @@ public class MainFromToButtonsControl : MonoBehaviour
         {
             Destroy(_ai.GetComponentInChildren<TrailRenderer>());
             _cancelWayButtonAnim.Play("CancelWayButtonDown");
+            
+            _wayDetails.GetComponent<WayDetailsAnimation>().AnimationStateControl();
 
             _wayDetailsButton.GetComponent<Animation>().Play("WayDetailsDown");
             
             _wayDetails.GetComponent<ListOfDetailsCleaner>().CleanAllButtons();
-            
-            //_ai.GetComponent<AILerp>().enabled = false;
-            //_ai.transform.position = _startPoint.transform.position;
             
             if(_wayManager.GetComponent<WayManager>()._isFromInPlace)
             {
@@ -100,15 +99,11 @@ public class MainFromToButtonsControl : MonoBehaviour
             _cancelWayButtonAnim.Play("CancelWayButtonDown");
             Destroy(_ai.GetComponentInChildren<TrailRenderer>());
             
+            _wayDetails.GetComponent<WayDetailsAnimation>().AnimationStateControl();
+            
             _wayDetailsButton.GetComponent<Animation>().Play("WayDetailsDown");
             
             _wayDetails.GetComponent<ListOfDetailsCleaner>().CleanAllButtons();
-            /*
-            if(_wayManager.GetComponent<WayManager>()._isToInPlace)
-            {
-                _startPoint.transform.position = new Vector3(-9, -40, -0.1f);
-            }
-            */
         }
 
         _wayManager.GetComponent<WayManager>()._isToInPlace = true;

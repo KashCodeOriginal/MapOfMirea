@@ -212,6 +212,6 @@ public class MainButtonController : MonoBehaviour
   }
   private void OnButtonEnabledColorChanging(GameObject _name)
   {
-    _name.GetComponent<Image>().color = new Color(_referenceForButtons.color.r - 0.1f, _referenceForButtons.color.g - 0.1f, _referenceForButtons.color.b - 0.1f);
+    _name.GetComponent<Image>().color = new Color(0.654902f, 0.6235294f,1);
   }
 }

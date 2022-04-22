@@ -61,7 +61,11 @@ public class MainDrawWay : MonoBehaviour
           
           _camera.GetComponent<MainCamControll>().targetPosx = Start.transform.position.x;
           _camera.GetComponent<MainCamControll>().targetPosy = Start.transform.position.y;
-
+          
+          if (Start.transform.position.z == 19.1f)
+          {
+            _floorChangingButton.GetComponent<FloorChangingButton>().OnZeroFloorClick();
+          }
           if (Start.transform.position.z == 14.1f)
           {
             _floorChangingButton.GetComponent<FloorChangingButton>().OnFirstFloorClick();

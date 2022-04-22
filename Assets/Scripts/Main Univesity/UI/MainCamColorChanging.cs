@@ -5,11 +5,13 @@ using UnityEngine.UI;
 
 public class MainCamColorChanging : MonoBehaviour
 {
+    [SerializeField] private SpriteRenderer _zeroFloor;
     [SerializeField] private SpriteRenderer _firstFloor;
     [SerializeField] private SpriteRenderer _secondFloor;
     [SerializeField] private SpriteRenderer _thirdFloor;
     [SerializeField] private SpriteRenderer _fourthFloor;
     
+    [SerializeField] private SpriteRenderer _firstFloorBG;
     [SerializeField] private SpriteRenderer _secondFloorBG;
     [SerializeField] private SpriteRenderer _thirdFloorBG;
     [SerializeField] private SpriteRenderer _fourthFloorBG;
@@ -38,7 +40,8 @@ public class MainCamColorChanging : MonoBehaviour
     {
         _modelForSettings.color = gameObject.GetComponent<Image>().color;
         _modelWaySettings.color = gameObject.GetComponent<Image>().color;
-
+        
+        _zeroFloor.color = new Color(gameObject.GetComponent<Image>().color.r, gameObject.GetComponent<Image>().color.g, gameObject.GetComponent<Image>().color.b, _firstFloor.color.a);
         _firstFloor.color = new Color(gameObject.GetComponent<Image>().color.r, gameObject.GetComponent<Image>().color.g, gameObject.GetComponent<Image>().color.b, _firstFloor.color.a);
         _secondFloor.color = new Color(gameObject.GetComponent<Image>().color.r, gameObject.GetComponent<Image>().color.g, gameObject.GetComponent<Image>().color.b, _secondFloor.color.a);
         _thirdFloor.color = new Color(gameObject.GetComponent<Image>().color.r, gameObject.GetComponent<Image>().color.g, gameObject.GetComponent<Image>().color.b, _thirdFloor.color.a);
@@ -85,6 +88,7 @@ public class MainCamColorChanging : MonoBehaviour
         _backGround.color = gameObject.GetComponent<Image>().color;
         _backgroundWaySettings.color = gameObject.GetComponent<Image>().color;
         
+        _firstFloorBG.color = new Color(gameObject.GetComponent<Image>().color.r, gameObject.GetComponent<Image>().color.g, gameObject.GetComponent<Image>().color.b, _secondFloor.color.a);
         _secondFloorBG.color = new Color(gameObject.GetComponent<Image>().color.r, gameObject.GetComponent<Image>().color.g, gameObject.GetComponent<Image>().color.b, _secondFloor.color.a);
         _thirdFloorBG.color = new Color(gameObject.GetComponent<Image>().color.r, gameObject.GetComponent<Image>().color.g, gameObject.GetComponent<Image>().color.b, _thirdFloor.color.a);
         _fourthFloorBG.color = new Color(gameObject.GetComponent<Image>().color.r, gameObject.GetComponent<Image>().color.g, gameObject.GetComponent<Image>().color.b, _fourthFloor.color.a);

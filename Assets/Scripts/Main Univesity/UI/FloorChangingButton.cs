@@ -104,11 +104,11 @@ public class FloorChangingButton : MonoBehaviour
     _secondFloor.GetComponent<SpriteRenderer>().color = _firstFloor.GetComponent<SpriteRenderer>().color;
     _thirdFloor.GetComponent<SpriteRenderer>().color = _firstFloor.GetComponent<SpriteRenderer>().color;
     _fourthFloor.GetComponent<SpriteRenderer>().color = _firstFloor.GetComponent<SpriteRenderer>().color;
-
-    _firstFloorBG.GetComponent<SpriteRenderer>().color = new Color(_secondFloorBG.GetComponent<SpriteRenderer>().color.r, _secondFloorBG.GetComponent<SpriteRenderer>().color.g, _secondFloorBG.GetComponent<SpriteRenderer>().color.b, 0);
-    _secondFloorBG.GetComponent<SpriteRenderer>().color = _firstFloor.GetComponent<SpriteRenderer>().color;
+    
+    _secondFloorBG.GetComponent<SpriteRenderer>().color = new Color(_secondFloorBG.GetComponent<SpriteRenderer>().color.r, _secondFloorBG.GetComponent<SpriteRenderer>().color.g, _secondFloorBG.GetComponent<SpriteRenderer>().color.b, 0);
     _thirdFloorBG.GetComponent<SpriteRenderer>().color = _secondFloorBG.GetComponent<SpriteRenderer>().color;
     _fourthFloorBG.GetComponent<SpriteRenderer>().color = _secondFloorBG.GetComponent<SpriteRenderer>().color;
+    _firstFloorBG.GetComponent<SpriteRenderer>().color = _secondFloorBG.GetComponent<SpriteRenderer>().color;
 
     _zeroFloorCanvas.SetActive(false);
     _firstFloorCanvas.SetActive(false);

@@ -15,6 +15,8 @@ public class MainWayBuilder : MonoBehaviour
   private GameObject _textTo;
   private GameObject _cancel;
   private GameObject _wayManager;
+  private Button _zeroFloorButton;
+  private GameObject _zeroFloor;
   private Button _firstFloorButton;
   private GameObject _firstFloor;
   private Button _secondFloorButton;
@@ -72,6 +74,8 @@ public class MainWayBuilder : MonoBehaviour
     _textTo = GameObject.FindWithTag("TextTo");
     _cancel = GameObject.FindWithTag("Cancel");
     _wayManager = GameObject.FindWithTag("WayManager");
+    _zeroFloor = GameObject.FindWithTag("ZeroFloor");
+    _zeroFloorButton = GameObject.FindWithTag("ZeroFloorButton").GetComponent<Button>();
     _firstFloor = GameObject.FindWithTag("FirstFloor");
     _firstFloorButton = GameObject.FindWithTag("FirstFloorButton").GetComponent<Button>();
     _secondFloor = GameObject.FindWithTag("SecondFloor");
@@ -98,6 +102,10 @@ public class MainWayBuilder : MonoBehaviour
     ButtonFloorCheck(_tempRoomName, _tempRoomName2,_thirdFloorObject,ref _isObjectOnThirdFloor);
     ButtonFloorCheck(_tempRoomName, _tempRoomName2,_fourthFloorObject,ref _isObjectOnFourthFloor);
 
+    if (_tempRoomName2.StartsWith("Кабинет №Г1"))
+    {
+      RoomsButtonFloorCheck(_zeroFloorButton, button, _tempRoomName2,_tempRoomName, _zeroFloor, 19.1f);
+    }
     if ((_tempRoomName2.StartsWith("Кабинет №А1") && _tempRoomName2 != "Кабинет №А1" &&
          _tempRoomName2 != "Кабинет №А10" && _tempRoomName2 != "Кабинет №А11" && _tempRoomName2 != "Кабинет №А12" &&
          _tempRoomName2 != "Кабинет №А13" && _tempRoomName2 != "Кабинет №А14" && _tempRoomName2 != "Кабинет №А15" &&

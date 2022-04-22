@@ -1,19 +1,19 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using System.Collections.Generic;
 
 public class MainCameraMover : MonoBehaviour
 {
 
-  TextMeshProUGUI getItemText;
+  private TextMeshProUGUI getItemText;
 
-  GameObject _canvas;
+  private GameObject _canvas;
 
-  GameObject _firstFloor;
-  GameObject _secondFloor;
-  GameObject _thirdFloor;
-  GameObject _fourthFloor;
+  private GameObject _zeroFloor;
+  private GameObject _firstFloor;
+  private GameObject _secondFloor;
+  private GameObject _thirdFloor;
+  private GameObject _fourthFloor;
   
   private string _tempRoomName;
   private string _tempRoomNameSecond;
@@ -22,6 +22,7 @@ public class MainCameraMover : MonoBehaviour
   private float _posy;
   private float _posz;
 
+  private Button _zeroFloorButton;
   private Button _firstFloorButton;
   private Button _secondFloorButton;
   private Button _thirdFloorButton;
@@ -46,11 +47,13 @@ public class MainCameraMover : MonoBehaviour
     button.onClick.AddListener(MenuDown);
     button.onClick.AddListener(CamMover);
 
+    _zeroFloor = GameObject.FindWithTag("ZeroFloor");
     _firstFloor = GameObject.FindWithTag("FirstFloor");
     _secondFloor = GameObject.FindWithTag("SecondFloor");
     _thirdFloor = GameObject.FindWithTag("ThirdFloor");
     _fourthFloor = GameObject.FindWithTag("FourthFloor");
 
+    _zeroFloorButton = GameObject.FindWithTag("ZeroFloorButton").GetComponent<Button>();
     _firstFloorButton = GameObject.FindWithTag("FirstFloorButton").GetComponent<Button>();
     _secondFloorButton = GameObject.FindWithTag("SecondFloorButton").GetComponent<Button>();
     _thirdFloorButton = GameObject.FindWithTag("ThirdFloorButton").GetComponent<Button>();
@@ -102,6 +105,21 @@ public class MainCameraMover : MonoBehaviour
       }
     }
 
+    if (_tempRoomName.StartsWith("Кабинет №Г1"))
+    {
+      _zeroFloorButton.onClick.Invoke();
+      for (int i = 0; i < _zeroFloor.transform.GetChild(0).transform.childCount; i++)
+      {
+        if (_zeroFloor.transform.GetChild(0).transform.GetChild(i).name == _tempRoomName || _zeroFloor.transform.GetChild(0).transform.GetChild(i).name == _tempRoomNameSecond)
+        {
+          _posx = _zeroFloor.transform.GetChild(0).transform.GetChild(i).GetComponent<MeshRenderer>().bounds.center.x;
+          _posy = _zeroFloor.transform.GetChild(0).transform.GetChild(i).GetComponent<MeshRenderer>().bounds.center.y;
+          _posz = _zeroFloor.transform.GetChild(0).transform.GetChild(i).transform.position.z;
+
+          _zeroFloor.transform.GetChild(0).transform.GetChild(i).GetComponent<Button>().onClick.Invoke();
+        }
+      }
+    }
     if ((_tempRoomName.StartsWith("Кабинет №А1") && _tempRoomName != "Кабинет №А1" && _tempRoomName != "Кабинет №А10" && _tempRoomName != "Кабинет №А11" && _tempRoomName != "Кабинет №А12" && _tempRoomName != "Кабинет №А13" && _tempRoomName != "Кабинет №А14" && _tempRoomName != "Кабинет №А15" && _tempRoomName != "Кабинет №А16" && _tempRoomName != "Кабинет №А17" && _tempRoomName != "Кабинет №А18") || _isObjectOnFirstFloor == true || _tempRoomName.StartsWith("Кабинет №Г2") || _tempRoomName.StartsWith("Кабинет №В2") || _tempRoomName.StartsWith("Кабинет №Б2") || _tempRoomName.StartsWith("Кабинет №Д2"))
     {
       _firstFloorButton.onClick.Invoke();

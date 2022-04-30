@@ -238,6 +238,9 @@ public class MainCamControll : MonoBehaviour
       {
         switch (AI.transform.position.z)
         {
+          case 19.5f:
+            _wayDetailsController.AddPointToWayDetails("Маршрут на нулевом этаже");
+            break;
           case 14.5f:
             _wayDetailsController.AddPointToWayDetails("Маршрут на первом этаже");
             break;

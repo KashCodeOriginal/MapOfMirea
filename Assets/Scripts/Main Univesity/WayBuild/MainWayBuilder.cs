@@ -102,7 +102,7 @@ public class MainWayBuilder : MonoBehaviour
     ButtonFloorCheck(_tempRoomName, _tempRoomName2,_thirdFloorObject,ref _isObjectOnThirdFloor);
     ButtonFloorCheck(_tempRoomName, _tempRoomName2,_fourthFloorObject,ref _isObjectOnFourthFloor);
 
-    if (_tempRoomName2.StartsWith("Кабинет №Г1"))
+    if (_tempRoomName.StartsWith("Кабинет №Г1") || _tempRoomName.StartsWith("Кабинет №Б1") || _tempRoomName.StartsWith("Кабинет №В1") || _tempRoomName.StartsWith("Кабинет №Д1") || _tempRoomName.Contains("Офис") || _tempRoomName.Contains("Туалет М/Ж В112.5") || _tempRoomName.Contains("Туалет М/Ж Д117"))
     {
       RoomsButtonFloorCheck(_zeroFloorButton, button, _tempRoomName2,_tempRoomName, _zeroFloor, 19.1f);
     }

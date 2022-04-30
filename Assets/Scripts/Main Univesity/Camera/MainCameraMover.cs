@@ -105,7 +105,7 @@ public class MainCameraMover : MonoBehaviour
       }
     }
 
-    if (_tempRoomName.StartsWith("Кабинет №Г1"))
+    if (_tempRoomName.StartsWith("Кабинет №Г1") || _tempRoomName.StartsWith("Кабинет №Б1") || _tempRoomName.StartsWith("Кабинет №В1") || _tempRoomName.StartsWith("Кабинет №Д1") || _tempRoomName.Contains("Офис") || _tempRoomName.Contains("Туалет М/Ж В112.5") || _tempRoomName.Contains("Туалет М/Ж Д117"))
     {
       _zeroFloorButton.onClick.Invoke();
       for (int i = 0; i < _zeroFloor.transform.GetChild(0).transform.childCount; i++)
